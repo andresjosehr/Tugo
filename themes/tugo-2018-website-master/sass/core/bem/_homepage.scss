@@ -1,0 +1,542 @@
+*{
+	font-family: "Montserrat";
+}
+
+.page-id-2 {
+	background-color: #f5f5f5;
+}
+.life-img{
+	margin-top: -67px;
+}
+.life-col1{
+	    margin-top: 75px;
+}
+.btn-con{
+color: #f5f5f5;
+font-size: 18px;
+font-weight: 700;
+line-height: 18px;
+}
+.btn-des{
+	padding: 15px;
+	border-radius: 25px;
+	background-image: linear-gradient(156deg, #fc782a 0%, #fa4c4c 100%);
+}
+.hash{
+
+color: white;
+font-size: 25px;
+font-weight: 300;
+
+}
+.experience{
+
+color: white;
+font-size: 30px;
+font-weight: 600;
+
+}
+
+.life{
+	
+	height: 390px;
+
+}
+
+.soc-log{
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.soc-title{
+	color: white;
+	font-size: 36px;
+	font-weight: 800;
+}
+.socios{
+	
+	background-color: white; 
+	height: 350px;
+	background-position-x: -5px;
+}
+.bene-img{
+	width: 7em;
+}
+.beneficios{
+	background-color: white;
+}
+
+.bene-con{
+	margin: 5%;
+}
+
+.bene-ti{
+	width: 319px;
+	height: 33px;
+	color: #fc6f31;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.bene-te{
+
+	width: 319px;
+	height: 57px;
+	color: #707070;
+	font-size: 13px;
+	font-weight: 600;
+
+}
+
+.como-ti{
+
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+
+
+}
+.como-te{
+	color: white;
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 10px;
+
+}
+.como-img{
+	width: 70%;
+	margin-left: 9.5%;
+	margin-top: -14%;
+}
+.como-container{
+	background-position-x: -5px;
+}
+
+
+.como-funciona{
+	margin-top: 50px;
+	background-color: white;
+
+}
+.com-cont{
+	    margin: 0 5% 40px;
+	    margin-top: -10%;
+}
+.como-hacer{
+margin-top: -80px;
+width: 292px;
+height: 42px;
+color: #5818b3;
+font-family: "Montserrat";
+font-size: 15px;
+font-weight: 800;
+}
+.como-hacer2{
+color: white;
+font-size: 15px;
+font-weight: 800;
+}
+.caract-img2{
+	z-index: 1;
+	position: absolute;
+	margin-left: 25px;
+	width: 27em;
+	margin-left: 3%;
+	border-radius: 20px;
+	
+}
+.caract-img3{
+    z-index: 1;
+    position: absolute;
+    width: 28%;
+    border-radius: 20px;
+    margin-left: -18px;
+	
+}
+.caract-img4{
+    z-index: 0;
+    position: absolute;
+    width: 34%;
+    margin-top: 16%;
+    margin-left: -4%;
+}
+
+.caract-img{
+	z-index: 0;
+	position: absolute;
+	width: 32em;
+  margin-top: 250px;
+}
+.caract-sub-c{
+	padding: 0px 0px 40px;
+	color: #6a6a6a;
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 10px;
+
+}
+.caract-sub-t{
+
+	color: #fb623b;
+	font-size: 18px;
+	font-weight: 600;
+
+}
+
+.caract-sub-t2{
+    margin: 78px 4% 0% 3%;
+	color: #fb623b;
+	font-size: 18px;
+	font-weight: 600;
+
+}
+
+.caract-hr{
+	width: 77px;
+	height: 8px;
+	margin-top: -2px;
+	border-radius: 41px;
+	background-image: linear-gradient(140deg, #fc782a 0%, #fa4c4c 100%);
+}
+
+.caract-title{
+	color: #141414;
+	 font-size: 36px;
+	font-weight: 800;
+}
+.caract-col1{
+	margin-top: 3%;
+}
+
+.caract-contain{
+	margin-top: 50px;
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+.des-app{
+	padding: 15px;
+	border-radius: 25px;
+	background-image: linear-gradient(156deg, #fc782a 0%, #fa4c4c 100%);
+}
+
+.col-tab-2{
+   margin: 10% 3% 0% 4%;
+}
+.col-tab-1{
+	margin: 10% 4% 0 3%;
+}
+.img-tab{
+
+      margin-top: 50px;
+
+}
+
+.btn-general a{
+	color: #f5f5f5;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 18px;
+}
+
+.btn-general{
+	color: #fff;
+	border-radius: 25px;
+	padding: 16px 40px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fc782a+0,fa4c4c+100 */
+background: #fc782a; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #fc782a 0%, #fa4c4c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #fc782a 0%,#fa4c4c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #fc782a 0%,#fa4c4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', endColorstr='#fa4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+	.hed_text{
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 300;
+		margin-top: 30px;
+		margin-bottom: 34px;
+	}
+	.hed_row {
+	    padding: 32% 11% 0;
+	}
+	.hed_row2{
+		margin-top: 120px;
+		margin-right: 10%;
+	}
+    .hed_content{
+    	height: 750px;
+    }
+	.header-viajero {
+
+		background-position: 0px -200px;
+	}
+	.hed_title{
+		border: 1px solid rgba(0, 0, 0, 0);
+		color: #ffffff;
+		font-family: "Montserrat";
+		font-size: 39px;
+		font-weight: 700;
+		z-index: 999999;
+	}
+	.caract-hr-com{
+				    margin-right: 336px;
+			}
+
+	.title-caract{
+		text-align: left;
+    	margin-bottom: 68px;
+	}
+	.car-hr{
+				    margin-right: 460px;
+			}
+
+	.soc-img1{
+		margin-right: 19%;
+    	margin-left: -63px;
+
+	}
+	.soc-img2{
+		margin-left: 15%;
+  		  margin-right: -77px;
+	}
+
+
+@media only screen and (max-width: 769px) {
+	.socios{
+		height: 400px !important;
+	}
+	.soc-tit{
+		    padding-top: 87px !important;
+
+	}
+			.life-col2{
+				display: none;
+			}
+			.life-col1 {
+			    margin-top: 0px;
+			}
+
+			.life-col3{
+			     margin-top: 90px;
+			}
+
+		.hed_row {
+	    		padding: 208px 34px 0;
+	    		text-align: center;
+			}
+			.hed_row2 {
+    				text-align: center;
+    				margin-top: 50px;
+			}
+			.header-viajero {
+			    background-position: -344px -200px;
+			    height: 725px;
+			}
+
+
+			.col-caract2{
+				text-align: center;
+				display: flex !important;
+			}
+			.caract-img {
+			    z-index: 0;
+			    position: absolute;
+			    width: 63%;
+			    margin-top: 31%;
+			}
+
+			.caract-img2{
+				z-index: 1;
+			    margin-left: 23px;
+			    width: 100%;
+				position: relative;
+			}
+			.cols2{
+				    margin-left: 9%;
+				    margin-top: -30px;
+			}
+			.com{
+    			text-align: center;
+    			    margin-top: 0px;
+			}
+			.bene-cols{
+				    text-align: center;
+			}
+			.title-caract{
+				text-align: center;
+			}
+			.car-hr{
+				margin-right: 225px;
+			}
+
+			.soc-img1{
+				margin-right: 0px;
+				margin-left: 0px;
+				margin-bottom: 37px;
+			}
+			.soc-img2{
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-bottom: 37px;
+			}
+			.soc-log {
+			    margin-top: 20px;
+			    margin-left: 0px;
+			    margin-right: 0px;
+			}
+
+			.header-col2{
+				display: none;
+			}
+}
+
+.tit-tab{
+	margin-top: 37px;
+	margin-bottom: -40px;
+}
+
+.caract-tab{
+	color: #141414;
+	font-size: 38px;
+	font-weight: 700;
+}
+
+.hr-tab{
+	width: 77px;
+	height: 9px;
+	border-radius: 41px;
+	background-image: linear-gradient(140deg, #fc782a 0%, #fa4c4c 100%);
+	margin-right: 199px;
+    margin-top: 0px;
+}
+.com-btn{
+	margin-top: 26px;
+	padding-bottom: 65px;
+
+}
+.hr-bene{
+		    margin-right: 120px;
+}
+
+
+@media only screen and (min-width: 1000px){
+	.slider{
+				display: none;
+			}
+	.caracteristicas{
+		    height: 655px;
+	}
+
+	.cac-anf{
+		height: 588px;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+	.como-container{
+
+	}
+		.socios{
+		background-repeat: no-repeat;
+		background-size: 102%;
+	}
+		.life{
+		background-repeat: no-repeat;
+		background-size: 117%;
+	}
+	.header-viajero{
+		background-repeat: no-repeat;
+    background-size: 102%;
+	}
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 769px){
+
+	.header-col2{
+		    padding-top: 72px;
+	}
+	.hed_row {
+	    padding: 54% 11% 0;
+	}
+
+}
+
+
+@media only screen and (max-width: 769px) and (min-width: 502px)  {
+	.com-cont{
+				display: flex;
+			}
+
+	}
+
+	@media only screen and (max-width: 1000px) and (min-width: 769px)  {
+			.caract-cont-img{
+				display: none;
+			}
+
+	}
+		@media only screen and (min-width: 769px)  {
+			
+			.caract-col1{
+				margin-top: 3%;
+				margin-left: 520px;
+			}
+
+
+		}
+		@media only screen and (max-width: 769px)  {
+			.com-cont{
+				display: none;
+			}
+			.com-btn{
+				padding-bottom: 63px;
+				
+			}
+
+		}
+
+		@media only screen and (max-width: 1000px){
+			.cols2{
+				    display: none;
+			}
+			.hed_title {
+			    font-size: 22px;
+			}
+			.hed_row {
+			    text-align: center;
+			}
+			.hed_row2 {
+			    
+			}
+
+		}
+
+
+
+	
+
+	@media only screen and (max-width: 500px){
+			.com-fun, .caract-title{
+				    font-size: 26px;
+			}
+			.car-hr {
+			    margin-right: 117px;
+			}
+			.caract-hr-com{
+				margin-right: 223px;
+			}
+			.experience {
+			    font-size: 23px;
+			}
+			.ray {
+			    margin-right: 118px;
+			}
+
+	}
+
+
+		

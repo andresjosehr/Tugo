@@ -1,0 +1,528 @@
+.anf-btn-text{
+	font-family: Montserrat;
+font-size: 18px;
+font-weight: 700;
+line-height: 18px;
+color: white;
+}
+.anf-btn{
+margin-top: 50px;
+padding: 13px 23px;
+border-radius: 25px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7c34f9+0,460a8f+100 */
+background: #7c34f9; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #7c34f9 0%, #460a8f 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #7c34f9 0%,#460a8f 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #7c34f9 0%,#460a8f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c34f9', endColorstr='#460a8f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.anf-cont{
+	color: #fcfcfc;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 30px 20% 0px 20%;
+}
+
+.col-anf {
+    padding: 231px 0px;
+}
+
+.anf-title{
+border: 1px solid rgba(0, 0, 0, 0);
+color: #ffffff;
+font-family: Montserrat;
+font-size: 40px;
+font-weight: 700;
+
+}
+
+.anf-img{
+	z-index: 0;
+	position: absolute;
+	width: 31em;
+    margin-top: 197px;
+}
+
+.anf-img2{
+	z-index: 1;
+	position: absolute;
+	margin-left: 25px;
+	width: 26em;
+	border-radius: 30px;
+}
+
+.anf-hr{
+	width: 77px;
+	height: 8px;
+	margin-top: -2px;
+	border-radius: 41px;
+	background-image: linear-gradient(140deg, #7c34f9 0%, #460a8f 100%);
+	margin-right: 189px;
+
+}
+
+.ray3{
+	margin-right: 503px;
+}
+.como-ser{
+	/* Style for "Sé un anfi" */
+	width: 186px;
+	height: 36px;
+	color: #fb6d32;
+	font-family: "Montserrat";
+	font-size: 15px;
+	font-weight: 600;
+}
+.pasos{
+	background-color: #f5f5f5;
+	margin-top: 55px; 
+
+	&-title{
+		color: #141414;
+		font-family: "Montserrat";
+		font-size: 36px;
+		font-weight: 700;
+	}
+	&-num{
+		width: 78px;
+		height: 95px;
+		border: 1px solid rgba(0, 0, 0, 0);
+		color: #e8e8e8;
+		font-family: "Montserrat";
+		font-size: 85px;
+		font-weight: 700;
+		position: absolute;
+		z-index: 0;
+		margin-left: -10px;
+	}
+	&-num2{
+		width: 78px;
+	    height: 95px;
+	    border: 1px solid transparent;
+	    color: #e8e8e8;
+	    font-size: 49px;
+	    font-weight: 700;
+	    z-index: 0;
+	    margin-top: -19px;
+	    margin-left: -80px;
+	}
+
+	&-img{
+		margin-top: 64px;
+    	margin-left: 30px;
+    	z-index: 199;
+	}
+	&-img2{
+    	z-index: 199;
+    	margin-top: -30px;
+	}
+	&-subti{
+		width: 235px;
+		height: 31px;
+		color: #6a6a6a;
+		font-family: "Montserrat";
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&-text{
+		width: 175px;
+		height: 69px;
+		color: #6a6a6a;
+		font-family: "Montserrat";
+		font-size: 13px;
+		font-weight: 800;
+	}
+	&-cen{
+		margin-right: 50px;
+	}
+}
+
+.porque{
+	&-title{
+		color: #707070;
+		font-family: "Montserrat";
+		font-size: 20px;
+		font-weight: 600;
+
+	}
+	&-text{
+		color: #6a6a6a;
+		font-family: "Montserrat";
+		font-size: 13px;
+		font-weight: 600;
+		width: 400px;
+
+		&-comi{
+		    margin-top: -25px;
+			margin-left: -45px;
+			color: #4d109e;
+			font-family: "Montserrat";
+			font-size: 70px;
+			font-weight: 700;
+			position: absolute;
+
+		}
+	}
+	&-col-right{
+		padding-top: 13%;
+    	margin-left: 10%;
+	}
+}
+.info-title{
+
+font-size: 20px;
+font-weight: 600;
+color: white;
+	
+}
+
+.info-text{
+width: 487px;
+height: 150px;
+color: #ffffff;
+font-size: 13px;
+font-weight: 400;
+margin-top: 20px;
+	
+}
+
+.cols{
+	margin-top: 85px;
+}
+
+.requisitos{
+	margin-top: 50px;
+	margin-left: 7%;
+	margin-right: 7%;
+
+	&-header{
+
+	}
+	&-title{
+		color: #141414;
+		font-family: "Montserrat";
+		font-size: 36px;
+		font-weight: 700;
+	}
+	&-sub{
+		font-family: "Montserrat";
+		font-size: 20px;
+		font-weight: 800;
+	}
+	&-text{
+		color: #6a6a6a;
+		font-family: "Montserrat";
+		font-size: 13px;
+		font-weight: 600;
+		width: 96%;
+	}
+	&-img{
+		border-radius: 20px;
+	}
+	&-col2{
+	    margin-top: 40px;
+	    margin-left: 8%;
+	}
+}
+
+
+.btn-des2{
+	width: 225px;
+	height: 45px;
+	border-radius: 25px;
+	background-color: #ffffff;
+	padding: 16px 40px;
+}
+
+.btn-con2{
+	width: 139px;
+height: 20px;
+border: 1px solid rgba(0, 0, 0, 0);
+color: #5f1dc0;
+font-size: 18px;
+font-weight: 700;
+line-height: 18px;
+}
+
+.porque-img{
+	margin-left: 49px;
+    width: 88%;
+    border-radius: 15px;
+    margin-bottom: 35px;
+}
+.pashed2{
+	display: none;
+}
+
+.req-tit{
+			display: none;
+}
+
+.hr-pasos{
+	    margin-right: 532px;
+}
+
+.des {
+	color: #6a6a6a;
+	font-size: 13px;
+	font-weight: 800;
+}
+
+
+@media only screen and (min-width: 1200px){
+	.info{
+		background-repeat: no-repeat;
+	    background-size: 102%;
+	}
+}
+
+@media only screen and (max-width: 561px){
+	.ext-hr{
+			margin-right: 171px !important;
+		}
+}
+
+@media only screen and (max-width: 1000px){
+			.pasos-col{
+			display: none;
+		}
+		.pasos-col2{
+			display: block !important;
+		}
+		.pasos3{
+			width: 100% !important;
+		}
+			.pasos4{
+		display: block !important;
+	}
+}
+
+
+	@media only screen and (max-width: 768px){
+		.requisitos-title{
+			    font-size: 25px;
+		}
+		.req-tit2{
+			margin-top: -47px;
+		}
+		.porque .container .slick-next, .porque .container .slick-prev{
+			    display: none !important;
+		}
+
+
+		
+		.ant-foot{
+			    margin: 41px 6%;
+		}
+		.life-img2{
+			width: 284px;
+		}
+		.cel-anf{
+			text-align: center;
+		}
+
+		.col-anf {
+		    padding: 168px 0;
+		}
+		.anf-title {
+		    font-size: 25px;
+		}
+		.anf-cont {
+		    margin: 30px 10% 0;
+		}
+
+		.caract-contain2{
+			text-align: center;
+		}
+		.caract-cols{
+			display: flex;
+		}
+		.caract-contain {
+		    display: block;
+		}
+		.caract-tablet, .pas{
+			display: none;	
+		}
+		.caract-img-g1{
+			display: none;
+		}
+		.ray{
+			margin-right: 191px;
+		}
+		.caract-tit{
+			text-align: center;
+		}
+		.info{
+			background-repeat: no-repeat;
+    		background-size: 2140px;
+		}
+		.cols {
+		     margin-top: 0px; 
+		}
+		.cas1{
+			        margin-top: 100px;
+		}
+		.cas2{
+			    margin-top: -56px;
+		}
+		.info-text{
+			     width: 84%; 
+		}
+		.porque-img{
+			display: none !important;
+		}
+		.porque-img2{
+			display: block;
+			border-radius: 50%;
+		}
+		.porque-text {
+		     width: 80%;
+		}
+		.porque-col-right {
+        	padding-top: 0%; 
+     		margin-left: 0%; 	
+		}
+
+		.porque-title {
+		    margin-left: 48px;
+		}
+
+		.porque-text-comi {
+		    margin-left: 1%;
+		}
+		.intermed{
+			display: block !important;
+		}
+		.intermed0{
+			display: none !important;
+			margin-left: 8%;
+		}
+
+
+}
+
+@media only screen and (min-width: 769px){
+		.tit{
+			text-align: left;
+		}
+		.porque-img2{
+			display: none !important;
+		}
+		.porq-div{
+			text-align: right;
+		}
+		.col-2-anf{
+			text-align: left;
+		}
+}
+
+
+	@media only screen and (max-width: 1000px) and (min-width: 769px){
+		.tab-tab{
+			display: flex !important;
+		}
+
+		.caract-contain {
+		    display: none !important;
+		}
+		.caract-tablet{
+			display: flex !important;	
+		}
+		.pas, .tit-tab{
+			display: block !important;
+		}
+		.info-text{
+			width: 100%;
+			padding: 0% 10%;
+		}
+		.info{
+			background-repeat: no-repeat;
+    		background-size: 1900px;
+		}
+		.req-tit{
+			display: block;
+		}
+		.req-tit2{
+			display: none;
+		}
+		.com-1{
+			display: none;
+		}
+		.com-2{
+			display: block !important;
+		}
+		.req-456{
+			margin-top: 36px;
+		}
+
+	}
+		@media only screen and (max-width: 500px){
+			.ray {
+			    margin-right: 118px;
+			}
+			.hr-bene{
+				    margin-right: 63px;
+			}
+		}
+
+			@media only screen and (max-width: 700px){
+
+			.ext-hr {
+			    margin-right: 464px;
+			}
+			.pashed2{
+				display: block;
+			}
+			.pasos-title {
+			    font-size: 32px;
+			}
+			.ray2{		
+    			margin-right: 415px;
+			}
+			.pashed1{
+				display: none !important;
+			}
+		}
+
+		@media only screen and (max-width: 563px){
+			.ray2{		
+    			display: none;
+			}
+		}
+
+			@media only screen and (min-width: 670px){
+					.pashed1{
+						display: block;
+					}
+				}
+		@media only screen and (max-width: 700px) and (min-width: 450px){
+
+			.ext-hr {
+			    margin-right: 464px;
+			}
+		}
+
+	.anf-img-2{
+		z-index: 0;
+		position: absolute;
+		    width: 29%;
+    margin-top: 123px;
+   		margin-left: -13px;
+	}
+
+	.anf-img2-2 {
+		z-index: 1;
+		position: absolute;
+    	width: 26%;
+   		border-radius: 15px;
+	}
+
+	.caract-tablet{
+		margin: -3% 40px;
+	}
+
+	.co-container{
+		 padding: 0 8px;
+	}

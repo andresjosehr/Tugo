@@ -1,0 +1,86 @@
+.hed-cont{
+	 background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}	
+
+.form-prins{
+    padding: 177px 0;
+    color: #fff;
+    max-width: 590px;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-title{
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 0;
+}
+
+.form-sub{
+	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.in-form{
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	border-radius: 4px;
+	border: 0px;
+	background-color: black;
+	opacity: 0.4;
+	height: 45px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.14);
+}
+
+
+.btn-cont{
+	padding: 16px 100px;
+	border-radius: 25px;
+	background-image: linear-gradient(156deg, #fc782a 0%, #fa4c4c 100%);
+}
+.sect-btn{
+	text-align: right;
+}
+
+.btn-text{
+	color: #f5f5f5;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.in-form::-webkit-input-placeholder { /* Chrome */
+	opacity: 1;
+	color: white;
+	transition: opacity 250ms ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 1000px) and (min-width: 769px){
+	
+}
+
+
+@media only screen and (max-width: 769px){
+
+	.sect-btn{
+		margin-top: 31px;
+		text-align: center;
+	}
+}
+
+
+@media only screen and (max-width: 1000px){
+
+	.sect-btn{
+		margin-top: 31px;
+		text-align: center;
+	}
+	.form-prins {
+    	padding: 130px 13%;
+    }
+}

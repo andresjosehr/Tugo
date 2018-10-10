@@ -1,0 +1,150 @@
+.footer-new {
+    position: relative;
+    &__social {
+        padding: 50px 0 30px 0;
+        background-color: #003C58;
+
+        &__link {
+            color: $white;
+            margin: 0 5em;
+            &:hover {
+                color: $white;
+            }
+        }
+
+        &__brand {
+            color: $white;
+            font-size: 20px;
+            margin-right: 2em;
+            &:hover {
+                color: $white;
+            }
+        }
+
+        &__button {
+            background-color: $second;
+            border-radius: 25px;
+            color: $first;
+            padding: 13px 30px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        &-left {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &-right {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            padding-left: 4em;
+            border-left: #ffffff solid 1px;
+        }
+    }
+    &__copyright {
+        background-color: #242424;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: #ffffff;
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1;
+        }
+    }
+
+    &__scroll {
+        position: absolute;
+        top: -43px;
+        width: 100%;
+        text-align: center;
+
+        img {
+            max-width: 80px;
+        }
+        
+    }
+}
+.corr{
+    margin-bottom: -64px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-new {
+
+        &__social {
+            padding: 50px 0 30px 0;
+            &__button {
+                font-size: 13px;
+                padding: 10px 10px;
+                display: block;
+                max-width: 300px;
+                text-align: center;
+                margin: 0 auto 30px auto;
+            }
+            &-left {
+                display: block;
+                text-align: center;
+                
+            }
+            &-right {
+                display: block;
+                text-align: center;
+            }
+
+            &__link {
+                margin: 0;
+            }
+
+            &__brand {
+                margin-right: 0;
+            }
+            
+            &__mobile {
+                max-width: 300px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+        &__copyright {
+            font-size: 12px;
+            text-align: center;
+        }
+        &__scroll {
+            top: -17px;
+
+            img {
+                max-width: 35px;
+            }
+            
+        }
+
+    }
+
+}
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+    .footer-new {
+        &__social {
+            &__link {
+                margin: 0 2em;
+            }
+            &__button {
+                padding: 13px 8px;
+                font-size: 14px;
+            }
+        }
+    }
+    
+}

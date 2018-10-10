@@ -1,0 +1,87 @@
+.faq-hed{
+	padding: 235px 20% 15%;
+}
+
+.faq-tit{
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.faq-sub{
+
+	border: 1px solid rgba(0, 0, 0, 0);
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 400;
+	
+}
+.faq{
+	background-position-x: 75%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.faq-via{
+	color: #fc782a;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.faq-anf{
+/* Style for "Anfitrión" */
+color: #460a8f;
+font-size: 20px;
+font-weight: 700;
+}
+
+
+
+@media only screen and (max-width: 1000px) and (min-width: 769px){
+	.faq-hed {
+	    padding: 235px 20% 20%;
+	}
+}
+
+
+@media only screen and (max-width: 769px){
+	.faq{
+		background-repeat: no-repeat;
+ 		    background-size: 1654px;
+	}
+	.faq-hed {
+	    padding: 235px 20% 48%;
+	}
+	.faq-sub {
+	    font-size: 14px;
+	}
+	.faq-tit {
+	    font-size: 28px;
+	}
+	.cont-col2 {
+	    margin-right: 6% !important;
+	    margin-left: 6% !important;
+	    text-align: center;
+	    margin-bottom: 44px;
+	}
+	.btx{
+		text-align: center;
+	}
+	.cont-col1 {
+	    margin-left: 6%;
+	    margin-right: 6%;
+	}
+
+}
+
+
+@media only screen and (max-width: 1000px){
+
+
+
+}
+
+
+
+

@@ -1,0 +1,187 @@
+.how-to {
+    &__top {
+        position: relative;
+        
+        padding: 100px 0 200px 0;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &__title {
+            color: #003d56;
+            font-family: Montserrat;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: -1.84px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        &__button {
+            padding: 16px 50px;
+            margin-bottom: 75px;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -1.38px;
+            line-height: 1;
+            color: $first;
+            background-color: #fede39;
+            border-radius: 10px 0px 0px 10px;
+            -moz-border-radius: 10px 0px 0px 10px;
+            -webkit-border-radius: 10px 0px 0px 10px;
+            border: 2px solid #003d56;
+
+            &-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &--active {
+                border: 2px solid #003d56;
+                background-color: $first;
+
+                color: $white;
+                &:hover {
+                    color: $white !important;
+                }
+            }
+            &--right {
+                border-radius: 0px 10px 10px 0px;
+                -moz-border-radius: 0px 10px 10px 0px;
+                -webkit-border-radius: 0px 10px 10px 0px;
+            }
+            &:hover {
+                color: $first;
+            }
+        }
+
+    }
+    &__bottom {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            position: relative;
+            top: -200px;
+            max-width: 1090px;
+        }
+
+    }
+    &__download-app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: -130px;
+        &__title {
+            color: $first;
+            font-family: $primary-font;
+            font-size: 16px;
+            font-weight: 700;
+            margin-right: 25px;
+        }
+        &__button {
+            color: $white;
+            font-family: $primary-font;
+            font-size: 18px;
+            font-weight: 500;
+
+            background-color: $first;
+            border-radius: 35px;
+            padding: 8px 30px;
+
+
+            line-height: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                margin-left: 15px;
+                color: $yellow;
+                font-size: 45px;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+        padding-bottom: 100px;
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .how-to {
+        &__top {
+            padding-top: 50px;
+            &__title {
+                font-size: 25px;
+                font-weight: 700;
+                letter-spacing: -1.15px;
+                padding: 0 1em;
+                margin-bottom: 25px;
+            }
+            &__button {
+                padding: 10px 20px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: -0.55px;
+            }
+        }
+       &__download-app {
+           flex-direction: column;
+           padding-bottom: 50px;
+           margin-top: 0;
+
+            &__title {
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 1em;
+            }
+            &__button {
+                font-size: 15px;
+                padding: 5px 15px;
+                line-height: 1;
+
+                span {
+                    font-size: 25px;
+                }
+            }
+       }
+
+       &__slider {
+           &-container {
+            max-width: 350px;
+            margin: -225px auto 0 auto;
+           }
+           &__title {
+            color: $first;
+            font-family: $primary-font;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+           }
+           img {
+               margin: 0 auto;
+           }
+       }
+
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .how-to {
+        &__bottom {
+            &__img {
+                max-width: 700px;
+            }
+        }
+    }
+}
