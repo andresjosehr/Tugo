@@ -45,6 +45,12 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="all"/>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link href="<?php echo home_url(); ?>" rel="index" title="<?php bloginfo('name') ?> - <?php bloginfo('description'); ?>"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <?php wp_head(); ?>
 
   <script
@@ -62,6 +68,8 @@
 
   gtag('config', 'UA-120925188-1');
 
+  new WOW().init();
+  
   </script>
 
   <!-- Hotjar Tracking Code for https://www.mycanlove.com/ -->
@@ -76,86 +84,6 @@
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
-
-	<style>
-    .button8::before {
-    background-color: #fff !important;
-}
-.sim-button{
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 125px;
-  width: 60%;
-  cursor: pointer;
-}
-.button8:hover{
-  border: 3px solid #7c34f9;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  color: #7c34f9 !important;
-}
-
-.button8{
-  color: rgba(255,255,255,1);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  border: 1px solid rgba(255,255,255,0.5);
-  position: relative; 
-}
-
-.button8::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 25px;
-
-}
-.button8:hover::before{
-  opacity: 1;
-  width: 100%;
-}
-
-.menu-item-181 a {
-    padding: 13px 23px;
-    border-radius: 25px;
-    background: #7c34f9;
-    background: -webkit-linear-gradient(top left, #7c34f9 0%, #460a8f 100%);
-    background: -o-linear-gradient(top left, #7c34f9 0%, #460a8f 100%);
-    background: linear-gradient(to bottom right, #7c34f9 0%, #460a8f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c34f9', endColorstr='#460a8f',GradientType=1 );
-}
-
-
-
-		  .menu-item-181 a {
-      padding: 13px 23px;
-      border-radius: 25px;
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7c34f9+0,460a8f+100 */
-      background: #7c34f9; /* Old browsers: ; */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-      background: -webkit-linear-gradient(top left, #7c34f9 0%, #460a8f 100%);
-      background: -o-linear-gradient(top left, #7c34f9 0%, #460a8f 100%);
-      background: linear-gradient(to bottom right, #7c34f9 0%, #460a8f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c34f9', endColorstr='#460a8f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
-  } 
-	</style>
 </head>
 
 <body <?php body_class(); ?>>

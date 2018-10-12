@@ -132,6 +132,8 @@ body {
   line-height: 26px;
 }
 
+
+
 @media only screen and (max-width: 768px) {
   .flex-right {
     display: flex;
@@ -154,4 +156,126 @@ body {
   .row-reverse {
     flex-direction: column-reverse;
   }
+}
+
+
+
+
+.button8top:before {
+    background-color: #fff !important;
+}
+
+.button8top:hover{
+  border: 3px solid #7c34f9;
+  color: #7c34f9 !important;
+}
+
+
+
+.button8normor:before {
+    background-color: #460A8F !important;
+}
+.button8normor:hover{
+  border: 0px solid #f26f21;
+  color: #fff !important;
+}
+.anf-btn-text:hover{
+  color: white;
+}
+
+
+
+
+.button8normor2:before {
+    background-color: #460A8F !important;
+}
+.button8normor2:hover{
+  border: 0px solid #f26f21;
+  color: #fff !important;
+}
+
+.button8normor2:hover a{
+  color: #fff !important;
+}
+
+
+
+
+
+
+.button8blog:before {
+    background-color: #fff !important;
+}
+
+.button8blog:hover{
+  border: 3px solid #fc782a;
+}
+
+.button8blog:hover a{
+  color: #fc782a;
+}
+
+
+
+
+.button8faq:before {
+    background-color: #f7f8fb !important;
+}
+
+.button8faq:hover{
+  border: 3px solid #fc782a;
+}
+
+.button8faq:hover .text-enviarpre{
+  color: #fc782a;
+}
+
+
+
+.sim-button{
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 125px;
+  width: 60%;
+  cursor: pointer;
+}
+.button8:hover{
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button8{
+  color: rgba(255,255,255,1);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 0px solid rgba(255,255,255,0.5);
+  position: relative; 
+}
+
+.button8::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 25px;
+
+}
+.button8:hover::before{
+  opacity: 1;
+  width: 100%;
 }

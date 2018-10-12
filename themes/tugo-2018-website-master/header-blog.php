@@ -45,6 +45,7 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="all"/>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link href="<?php echo home_url(); ?>" rel="index" title="<?php bloginfo('name') ?> - <?php bloginfo('description'); ?>"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
   <?php wp_head(); ?>
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

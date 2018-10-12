@@ -124,6 +124,7 @@ font-weight: 600;
 	    margin-top: -10%;
 }
 .como-hacer{
+padding-top: 40px;
 margin-top: -80px;
 width: 292px;
 height: 42px;
@@ -136,6 +137,9 @@ font-weight: 800;
 color: white;
 font-size: 15px;
 font-weight: 800;
+}
+.como-hacer2:hover{
+color: white;
 }
 .caract-img2{
 	z-index: 1;
@@ -252,6 +256,15 @@ background: linear-gradient(135deg, #fc782a 0%,#fa4c4c 100%); /* W3C, IE10+, FF1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', endColorstr='#fa4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
+
+
+	.button8nor:before {
+	    background-color: #ff660c !important;
+	}
+	.button8nor:hover{
+	  border: 0px solid #f26f21;
+	  color: #fff !important;
+	}
 
 	.hed_text{
 		color: #ffffff;

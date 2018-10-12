@@ -454,7 +454,8 @@ function Scripts(){
     if ($(window).scrollTop() > 80) {
       
         $('.prin').css("background-color", "#FFF");
-        $( ".menu-item-181 a" ).addClass( "button8 sim-button" );
+        $( ".menu-item-181 a" ).addClass( "button8 button8top sim-button" );
+        $( ".menu-item-181 a" ).removeClass( "button8normor" );
         $('.prin').css("height", "125px");
         $('.prin a').css("color", "#fb623b");
 		    $('.prin .menu-item-181 a').css("color", "#FFF");
@@ -473,6 +474,8 @@ function Scripts(){
         $('.prin').css("background-color", "transparent");
         $('.prin').css("height", "125px");
         $('.prin .header__menu a').css("color", "#FFF");
+        $( ".menu-item-181 a" ).removeClass( "button8top" );
+        $( ".menu-item-181 a" ).addClass( "button8normor" );
         $('.prin .header__menu--button a').css("color", "#2454D6");
         $('.prin .header__menu--button a').css("background-color", "#FFF");
         $('.prin .header__logo img').attr("src", $('.header__logo img').data("dark"));
@@ -486,22 +489,22 @@ function Scripts(){
 
 
 
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-  $("html").addClass("disabled-scroll");
-  $("body").addClass("disabled-scroll");
-  $("header").hide(0);
-}
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+      $("html").addClass("disabled-scroll");
+      $("body").addClass("disabled-scroll");
+      $("header").hide(0);
+    }
 
-function closeNav() {
-    $("html").removeClass("disabled-scroll");
-    $("body").removeClass("disabled-scroll");
-    document.getElementById("myNav").style.width = "0%";
-    $("header").show(0);
-}
-</script>
-	<?php
-}
+    function closeNav() {
+        $("html").removeClass("disabled-scroll");
+        $("body").removeClass("disabled-scroll");
+        document.getElementById("myNav").style.width = "0%";
+        $("header").show(0);
+    }
+    </script>
+    	<?php
+    }
 
 
 

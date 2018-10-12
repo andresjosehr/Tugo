@@ -45,7 +45,7 @@
 						<?php the_field('titulo_del_header'); ?>
 					</p>
 					<p class="hed_text"><?php the_field('descripcion_del_header'); ?></p>
-					<span class="btn-general"><a href="#"><?php the_field('boton_del_header'); ?></a></span>
+					<span class="btn-general button8 sim-button button8nor"><a href="#" style="position:relative;z-index: 99"><?php the_field('boton_del_header'); ?></a></span>
 					</div>
 				</div>
 				<div class="column is-6 header-col2">
@@ -62,7 +62,7 @@
 <!-- Inicio de Caracteristicas -->
 <section class="caracteristicas">
 	<div class="container">
-	<div class="columns caract-contain">
+	<div class="columns caract-contain wow zoomIn">
 		<div class="column cols2" align="left">		
 				<img class="caract-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/Path_78.png'; ?>" alt="">
 				<img class="caract-img2" src="<?php the_field('imagen_del_2do_bloque'); ?>" alt="">
@@ -99,7 +99,7 @@
 				endif;
 				 ?>
 				 <div align="center">
-				<a class="como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a>
+				<a class="como-hacer com hvr-pulse-grow" style="padding-top: 40px;" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a>
 				</div>
 			</div>
 		</div>
@@ -159,13 +159,15 @@
 <!-- Inicio de Como funciona Tugo -->
 <section class="como-funciona" style='background-position-x: -10px;background-position-y: 303px;background-repeat: no-repeat;background-size: cover;background-image: url("<?php the_field('background_del_3er_bloque'); ?>");'>
 	<div class="container">
-		<div align="center" style="margin-bottom: 18%;padding-top: 47px;">
+		<div align="center" style="margin-bottom: 18%;padding-top: 47px;" class="wow zoomInUp">
 			<span class="caract-title com-fun"><?php the_field('titulo_del_3er_bloque'); ?></span>
 			<hr class="caract-hr caract-hr-com">
 		</div>
-	<div class="como-container">
-		<img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" alt="">
-		<div class="columns com-cont">
+	<div class="como-container" class="wow hinge">
+		<div class="wow fadeInLeft">
+			<img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" alt="">
+		</div>
+		<div class="columns com-cont wow fadeInRight">
 			<?php 
 			if( have_rows('contenido_de_3er_bloque') ):
 			    while ( have_rows('contenido_de_3er_bloque') ) : the_row();
@@ -199,8 +201,8 @@
 				 ?>			
 				</div>
 			</div>
-			<div align="center" class="com-btn">
-				<a class="como-hacer2" href="<?php echo site_url(); ?>/tutoriales">¿Cómo lo hago? >></a>
+			<div align="center" class="com-btn wow fadeInUp">
+				<a class="como-hacer2 hvr-pulse-grow" href="<?php echo site_url(); ?>/tutoriales">¿Cómo lo hago? >></a>
 			</div>
 		</div>
 		</div>
@@ -214,7 +216,7 @@
 <!-- Inicio de Beneficios -->
 <section class="beneficios">
 	<div class="container">
-		<div align="center" style="padding-top: 37px;">
+		<div align="center" class="wow bounceInDown" style="padding-top: 37px;">
 			<span class="caract-title"><?php the_field('titulo_del_4to_bloque'); ?></span>
 			<hr class="caract-hr hr-bene">
 		</div>
@@ -224,11 +226,13 @@
 					    while ( have_rows('contenido_del_4to_bloque') ) : the_row();
 					    ?>
 						<div class="column bene-cols" align="center">
-							<div align="center">
+							<div align="center" class="wow slideInLeft">
 								<img class="bene-img" class="como-img" src="<?php the_sub_field('imagen'); ?>" alt=""><br>
 								<span class="bene-ti"><?php the_sub_field('titulo'); ?></span>
 							</div><br>
-							<span class="bene-te"><?php the_sub_field('contenido'); ?></span>
+							<div class="wow slideInRight">
+								<span class="bene-te"><?php the_sub_field('contenido'); ?></span>
+							</div>
 						</div>
 						<?php
 					    endwhile;
@@ -237,8 +241,8 @@
 					endif;
 				?>
 		</div>
-		<div align="center" style="padding-bottom: 36px;padding-top: 20px;">
-			<a class="como-hacer" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_4to_bloque'); ?></a>
+		<div align="center" style="padding-bottom: 36px;padding-top: 20px;" class="wow fadeIn">
+			<a class="como-hacer hvr-pulse-grow" style="padding-top: 50px;" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_4to_bloque'); ?></a>
 		</div>
 	</div>
 </section>
@@ -247,10 +251,10 @@
 <!-- Inicio de Socios -->
 <section class="socios" style='height: 352px;background-image: url("<?php the_field('background_del_5to_bloque'); ?>");'>
 	<div class="container">
-	<div align="center" class="soc-tit" style="padding-top: 74px;">
+	<div align="center" class="soc-tit fadeInUp" style="padding-top: 74px;">
 		<span class="soc-title"><?php the_field('titulo_del_5to_bloque'); ?></span>
 		</div>
-		<div class="columns soc-log">
+		<div class="columns soc-log wow flipInY">
 			<?php 
 				if( have_rows('contenido_del_5to_bloque') ):
 				    while ( have_rows('contenido_del_5to_bloque') ) : the_row();
@@ -274,7 +278,7 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column life-col1" align="center">
-				<div class="life-col3">
+				<div class="life-col3 wow lightSpeedIn">
 				<?php 
 					if( have_rows('contenido_del_6to_bloque') ):
 					    while ( have_rows('contenido_del_6to_bloque') ) : the_row();
@@ -282,7 +286,7 @@
 							<span class="experience"><?php the_sub_field('titulo'); ?></span><br>
 							<span class="hash"><?php the_sub_field('subtitulo'); ?></span><br>
 							<div style="margin-top: 31px;">
-							<span class="btn-general"><a class="btn-con" href=""><?php the_sub_field('boton'); ?></a></span>
+							<span class="btn-general button8 sim-button button8nor"><a class="btn-con" style="position:relative;z-index: 99" href=""><?php the_sub_field('boton'); ?></a></span>
 							</div>
 						<?php
 					    endwhile;
@@ -291,7 +295,7 @@
 				?>
 				</div>
 			</div>
-			<div class="column life-col2">
+			<div class="column life-col2 wow rotateIn">
 				<img class="life-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/cta_v.png'; ?>" alt="">
 			</div>
 		</div>

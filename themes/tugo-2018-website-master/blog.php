@@ -45,7 +45,7 @@ get_header();
 			<div class="columns">
 		<?php endif ?>
 	  <div class="column is-4">
-			    <figure  class="image is-3by1">
+			    <figure class="image is-3by1 wow fadeInUp">
 			    	<a href="<?php the_permalink(); ?>">
 			      	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
 							 <div class="container nul-cont">
@@ -59,12 +59,12 @@ get_header();
 			    </figure>
 			    <div class="blog-descript">
 				    <div class="media">
-				      <div class="media-content">
+				      <div class="media-content wow lightSpeedIn">
 				        <span class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span> <i class="fas fa-share-alt"></i>
 				      </div>
 				    </div>
 				    <div  <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-				    	<p class="the-content-blog">
+				    	<p class="the-content-blog wow rotateInDownRight">
 							    	<?php 
 							    	$content = get_the_content() ;
 										$array_content = str_word_count($content, 1);
@@ -81,8 +81,8 @@ get_header();
 				    	 </p>
 				   			<br>
 					      <div class="columns colasd" align="left">
-					      	<div class="column inf">
-					      		<a href="<?php the_permalink(); ?>" class="c-reading">Leer articulo >></a>
+					      	<div class="column inf wow rotateInDownLeft">
+					      		<a href="<?php the_permalink(); ?>" class="c-reading hvr-pulse-grow">Leer articulo >></a>
 					      	</div>
 					     </div>	     
 						</div>
@@ -94,8 +94,12 @@ get_header();
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); // reset the query ?>
 		<div class="columns ver-mas">
-			<div class="column" align="center">
-				<span class="btn-blog"><a class="btn-blog-text" href="#">Ver más</a></span>
+			<div class="column wow bounceInLeft" align="center">
+				<span class="btn-blog button8 sim-button button8blog">
+					<a style="position:relative;z-index: 99" class="btn-blog-text" href="#">
+						Ver más
+					</a>
+				</span>
 			</div>
 		</div>
 </section>

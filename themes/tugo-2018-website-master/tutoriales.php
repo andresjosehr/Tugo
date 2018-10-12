@@ -234,9 +234,9 @@ font-weight: 500;
     <div class="columns">
         <div class="column is-8 tutoriales tuto-col1" align="center">
             <div class="tab">
-              <button class="tablinks" onclick="openCity(event, 'London')">Viajero</button>
-              <button class="tablinks active" onclick="openCity(event, 'Paris')">Anfitrión</button>
-              <button class="tablinks" onclick="openCity(event, 'Tokyo')">Experiencia</button>
+              <button class="tablinks hvr-pulse-grow" onclick="openCity(event, 'London')">Viajero</button>
+              <button class="tablinks active hvr-pulse-grow" onclick="openCity(event, 'Paris')">Anfitrión</button>
+              <button class="tablinks hvr-pulse-grow" onclick="openCity(event, 'Tokyo')">Experiencia</button>
             </div>
           <div id="London" class="tabcontent">
             <div class="tuto-tabcontent">

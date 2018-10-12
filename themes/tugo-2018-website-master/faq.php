@@ -110,8 +110,11 @@
 <div class="container">
   <div class="columns">
     <div class="column is-7-desktop">
-      <div class="cont-col1">       
+      <div class="cont-col1">  
+      <div class="wow fadeInLeft">
         <span class="faq-via">Viajero</span>
+        </div>     
+        <div class="wow fadeInRight">
           <?php 
           $i=0;
             if( have_rows('faq_viajero') ):
@@ -129,8 +132,12 @@
                 endwhile;
             endif;
           ?>
+          </div>
           <br><br>
-        <span class="faq-anf">Anfitrion</span>
+          <div class="wow fadeInLeft">
+            <span class="faq-anf">Anfitrion</span>
+          </div>
+          <div class="wow fadeInRight">
         <?php 
           $i=0;
             if( have_rows('faq_anfitrion') ):
@@ -148,6 +155,7 @@
                 endwhile;
             endif;
           ?>
+        </div>
       </div>
     </div>
     <div class="column is-5-desktop faq-col2">
@@ -155,23 +163,27 @@
         <span class="dud">¿Tienes una duda?</span><br>
         <span class="dud2">Escríbenos tu pregunta</span><br><br>
   
-        <div class="columns">
+        <div class="columns wow fadeInRight">
           <div class="column"><input type="text" name="" placeholder="Nombre" class="input in-anf"></div>
           <div class="column"><input type="text" name="" placeholder="Apellido" class="input in-anf"></div>
         </div>
-        <div class="columns">
+        <div class="columns wow fadeInRight">
           <div class="column">
             <input type="text" name="" placeholder="Apellido" class="input in-anf">
           </div>
         </div>
-        <div class="columns">
+        <div class="columns wow fadeInRight">
           <div class="column">
             <input type="text" name="" placeholder="Apellido" class="input in-anf">
           </div>
         </div>
-        <div class="columns">
+        <div class="columns wow fadeInRight">
           <div class="column btx" align="right">
-            <button type="submit" class="btn-enviarpre"><span class="text-enviarpre">Enviar</span></button>
+            <button type="submit" class="btn-enviarpre button8 button8faq">
+              <span class="text-enviarpre" style="position:relative;z-index: 99">
+                Enviar
+              </span>
+            </button>
           </div>
         </div>
       </div>
