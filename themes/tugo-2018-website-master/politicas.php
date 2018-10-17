@@ -165,62 +165,62 @@ body {font-family: "Lato", sans-serif;}
 	<div class="columns">
 		<div class="column is-3 col-left" align="left">
 			<div class="tab tab-pol">
-			  <a class="tablinks tat1" onclick="openCity(event, 'uso')" id="defaultOpen">Política de uso </a><br>
-			  <a class="tablinks tat2" onclick="openCity(event, 'privacidad')">Política de privacidad </a><br>
-			  <a class="tablinks tat3" onclick="openCity(event, 'reclamos')">Política de reclamos</a><br>
-			  <a class="tablinks tat4" onclick="openCity(event, 'condiciones')">Términos y condiciones </a>
+
+
+
+
+        <?php
+
+          $i=1;
+          // check if the repeater field has rows of data
+          if( have_rows('menu_lateral') ):
+
+            // loop through the rows of data
+              while ( have_rows('menu_lateral') ) : the_row();
+
+                ?>
+                  <a class="tablinks tat<?php echo $i ?>" onclick="openCity(event, 'politicas<?php echo $i; ?>')" id="politica<?php echo $i ?>"><?php the_sub_field('nombre'); ?></a><br>
+                <?php
+                
+                $i++;
+              endwhile;
+          endif;
+
+        ?>
+
+
 			</div>
 		</div>
 		<div class="column is-9 pol-right">
-			<div id="uso" class="tabcontent">
-			  <div class="global-pol">
-          <span class="pol">Política de Uso</span>
-          <div class="pol-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum saepe magni nisi tempore autem quibusdam illum adipisci aliquid eaque velit voluptatum aliquam ab, nihil voluptas aperiam. Facere, est, fugit.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio,  molestias provident suscipit, iste illum natus ipsum? Praesentium dolor nulla libero minus, totam, odio non aspernatur, repudiandae, natus debitis inventore?</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum earum iusto delectus perspiciatis modi officiis consequuntur, ut. Voluptatibus reiciendis perspiciatis provident soluta asperiores iste iure inventore aperiam at reprehenderit, placeat!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aut assumenda minima magni consequatur perferendis soluta molestiae, commodi nesciunt aperiam dolores saepe, numquam reprehenderit quod ad sed magnam sit! Minima.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti</p>
-          </div>                  
-        </div>
-			</div>
-			<div id="privacidad" class="tabcontent">
-			  <div class="global-pol">
-          <span class="pol">Política de privacidad</span>
-          <div class="pol-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio,  molestias provident suscipit, iste illum natus ipsum? Praesentium dolor nulla libero minus, totam, odio non aspernatur, repudiandae, natus debitis inventore?</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum saepe magni nisi tempore autem quibusdam illum adipisci aliquid eaque velit voluptatum aliquam ab, nihil voluptas aperiam. Facere, est, fugit.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum earum iusto delectus perspiciatis modi officiis consequuntur, ut. Voluptatibus reiciendis perspiciatis provident soluta asperiores iste iure inventore aperiam at reprehenderit, placeat!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aut assumenda minima magni consequatur perferendis soluta molestiae, commodi nesciunt aperiam dolores saepe, numquam reprehenderit quod ad sed magnam sit! Minima.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti</p>
-          </div>                  
-        </div> 
-			</div>
-			<div id="reclamos" class="tabcontent">
-        <div class="global-pol">
-          <span class="pol">Política de reclamo</span>
-          <div class="pol-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio,  molestias provident suscipit, iste illum natus ipsum? Praesentium dolor nulla libero minus, totam, odio non aspernatur, repudiandae, natus debitis inventore?</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum earum iusto delectus perspiciatis modi officiis consequuntur, ut. Voluptatibus reiciendis perspiciatis provident soluta asperiores iste iure inventore aperiam at reprehenderit, placeat!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aut assumenda minima magni consequatur perferendis soluta molestiae, commodi nesciunt aperiam dolores saepe, numquam reprehenderit quod ad sed magnam sit! Minima.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum saepe magni nisi tempore autem quibusdam illum adipisci aliquid eaque velit voluptatum aliquam ab, nihil voluptas aperiam. Facere, est, fugit.</p><br>
-          </div>                  
-        </div>
-      </div>
-      <div id="condiciones" class="tabcontent">
-        <div class="global-pol">
-          <span class="pol">Términos y condiciones</span>
-          <div class="pol-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum saepe magni nisi tempore autem quibusdam illum adipisci aliquid eaque velit voluptatum aliquam ab, nihil voluptas aperiam. Facere, est, fugit.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio,  molestias provident suscipit, iste illum natus ipsum? Praesentium dolor nulla libero minus, totam, odio non aspernatur, repudiandae, natus debitis inventore?</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti ut dolore. Optio, ex!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum earum iusto delectus perspiciatis modi officiis consequuntur, ut. Voluptatibus reiciendis perspiciatis provident soluta asperiores iste iure inventore aperiam at reprehenderit, placeat!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aut assumenda minima magni consequatur perferendis soluta molestiae, commodi nesciunt aperiam dolores saepe, numquam reprehenderit quod ad sed magnam sit! Minima.</p><br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ducimus dolorum odit aliquid accusamus distinctio aliquam placeat rerum, molestiae omnis, est iste voluptatem veritatis quam deleniti</p>
-          </div>                  
-        </div>
-      </div>
+
+
+      <?php
+
+          $i=1;
+          // check if the repeater field has rows of data
+          if( have_rows('menu_lateral') ):
+
+            // loop through the rows of data
+              while ( have_rows('menu_lateral') ) : the_row();
+
+                ?>
+                  <div id="politicas<?php echo $i; ?>" class="tabcontent">
+                    <div class="global-pol">
+                      <span class="pol"><?php the_sub_field('nombre'); ?></span>
+                      <div class="pol-text">
+                          <?php the_sub_field('contenido'); ?>
+                      </div>                  
+                    </div>
+                  </div>
+                <?php
+                
+                $i++;
+              endwhile;
+          endif;
+
+        ?>
+
+
 		</div>
 	</div>
  </section>
@@ -245,7 +245,7 @@ function openCity(evt, cityName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementById("politica1").click();
 </script>
 
 <?php Scripts(); ?>
