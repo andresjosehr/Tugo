@@ -78,7 +78,7 @@
 						    // no rows found
 						endif;
 					?>
-				<a class="como-hacer hvr-pulse-grow" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a>
+				<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a></span>
 			</div>
 			<div class="column caract-img-g1" align="left">
 				<img class="anf-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/Path_79-1.png'; ?>" alt="">
@@ -199,7 +199,9 @@
 		</div>
 	</div>
 	<div align="center" style="padding-bottom: 10px;">
-	<a class="como-ser hvr-pulse-grow" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_field('llamada_a_la_accion_del_3er_bloque'); ?></a>
+
+	<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a></span>
+
 	</div>
 	<br><br>
 	</div>
@@ -238,7 +240,8 @@
 											<?php the_sub_field('contenido'); ?>
 											<p class="porque-text"><br>
 											<?php the_sub_field('ubicacion'); ?></p><br><br>
-											<a class="como-ser hvr-pulse-grow" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_sub_field('llamada_a_la_accion'); ?></a>
+
+											<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_sub_field('llamada_a_la_accion'); ?></a></span>
 										<?php
 									    endwhile;
 									else :
@@ -268,7 +271,7 @@
 											<?php the_sub_field('contenido'); ?>
 											<p class="porque-text"><br>
 											<?php the_sub_field('ubicacion'); ?></p><br><br>
-											<a class="como-ser hvr-pulse-grow" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_sub_field('llamada_a_la_accion'); ?></a>
+											<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_sub_field('llamada_a_la_accion'); ?></a></span>
 										<?php
 									    endwhile;
 									else :
@@ -366,7 +369,7 @@
 											<p class="requisitos-text">
 												<?php the_sub_field('contenido'); ?>
 											</p><br>
-											<a class="como-ser com-1 hvr-pulse-grow" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_sub_field('llamada_a_la_accion'); ?></a>
+											<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/ser-anfitrion"><?php the_sub_field('llamada_a_la_accion'); ?><</a></span>
 										</div>
 									</div>
 								</div>
@@ -374,7 +377,8 @@
 							<br>
 							<div class="columns com-2" style="display: none">
 								<div class="column" align="center">
-									<a class="como-ser hvr-pulse-grow"><?php the_sub_field('llamada_a_la_accion'); ?></a>
+
+									<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_sub_field('llamada_a_la_accion'); ?><</a></span>
 								</div>
 							</div>				
 					<?php

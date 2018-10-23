@@ -17,6 +17,7 @@
 	}
 </style>
 
+
   <!-- The overlay -->
   <div id="myNav" class="overlay">
 
@@ -78,10 +79,10 @@
 				<?php 
 				$ani_bene = array();
 				$url=get_template_directory_uri()."/js/lottie/";
-				$ani_bene[0] = $url."a_salvo.json";
-				$ani_bene[1] = $url."a_salvo.json";
-				$ani_bene[2] = $url."tus_reglas.json";
-				$ani_bene[3] = $url."conviertete_en_anfitrion_2.json";
+				$ani_bene[0] = $url."";
+				$ani_bene[1] = $url."";
+				$ani_bene[2] = $url."";
+				$ani_bene[3] = $url."";
 				
 				$i=0;
 				if( have_rows('contenido_del_2do_bloque') ):
@@ -106,8 +107,8 @@
 				    // no rows found
 				endif;
 				 ?>
-				 <div align="center">
-				<a class="como-hacer com hvr-pulse-grow" style="padding-top: 40px;" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a>
+				 <div align="center" style="padding-top: 40px;">
+					<span class="des-fue"><a class="des-den como-hacer com" href="#"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a></span>
 				</div>
 			</div>
 		</div>
@@ -157,79 +158,13 @@
 				    // no rows found
 				endif;
 				?>
+				
 	</div>
 	</div>
 </section>
 
 <!-- Fin de Caracteristicas -->
 
-
-<style>
-		.des-den {
-		  color: black;
-		  text-decoration: none;
-		}
-
-		.des-fue {
-		  position: relative;
-		}
-		.des-fue:before, .des-fue:after {
-		  content: '';
-		  display: block;
-		  position: absolute;
-		  left: 0;
-		  width: 100%;
-		  background-color: red !important;
-		  -webkit-transform-origin: 0% 50%;
-		          transform-origin: 0% 50%;
-		  transition: -webkit-transform 250ms ease-in-out;
-		  transition: transform 250ms ease-in-out;
-		  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-		  z-index: -10;
-		}
-
-		.des-fue:before {
-		  top: calc(50% - 6px);
-		  height: 18px;
-		  -webkit-transform: scale3d(0, 1, 1);
-		          transform: scale3d(0, 1, 1);
-		}
-		.des-fue:after {
-		  bottom: -10px;
-		  height: 4px;
-		  -webkit-transform: scale3d(1, 1, 1);
-		          transform: scale3d(1, 1, 1);
-		}
-		.des-fue:hover:before, h1:focus:before {
-		  -webkit-transform: scale3d(1, 1, 1);
-		          transform: scale3d(1, 1, 1);
-		}
-		.des-fue:hover:after, h1:focus:after {
-		  -webkit-transform: scale3d(0, 1, 1);
-		          transform: scale3d(0, 1, 1);
-		}
- </style>
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-  <!-- Concept by Camille Raviart -->
-	<h1 class="des-fue"><a class="des-den" href="#">Vendre du rêve</a></h1>
-
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 <!-- Inicio de Como funciona Tugo -->
 <section class="como-funciona" style='background-position-x: -10px;background-position-y: 303px;background-repeat: no-repeat;background-size: cover;background-image: url("<?php the_field('background_del_3er_bloque'); ?>");'>
 	<div class="container">
@@ -280,7 +215,7 @@
 				</div>
 			</div>
 			<div align="center" class="com-btn wow fadeInUp">
-				<a class="como-hacer2 hvr-pulse-grow" href="<?php echo site_url(); ?>/tutoriales">¿Cómo lo hago? >></a>
+				<span class="des-fue"><a class="des-den como-hacer2 com-accion" href="<?php echo site_url(); ?>/tutoriales">¿Cómo lo hago? >></a></span>
 			</div>
 		</div>
 		</div>
@@ -321,7 +256,7 @@
 				?>
 		</div>
 		<div align="center" style="padding-bottom: 36px;padding-top: 20px;" class="wow fadeInUp">
-			<a class="como-hacer hvr-pulse-grow" style="padding-top: 50px;" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_4to_bloque'); ?></a>
+			<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_4to_bloque'); ?></a></span>
 		</div>
 	</div>
 </section>

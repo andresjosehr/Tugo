@@ -82,7 +82,7 @@ get_header();
 				   			<br>
 					      <div class="columns colasd" align="left">
 					      	<div class="column inf wow rotateInDownLeft">
-					      		<a href="<?php the_permalink(); ?>" class="c-reading hvr-pulse-grow">Leer articulo >></a>
+					      		<span class="des-fue"><a class="des-den como-hacer com" href="<?php the_permalink(); ?>">Leer articulo >></a></span>
 					      	</div>
 					     </div>	     
 						</div>
