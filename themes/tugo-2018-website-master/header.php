@@ -33,7 +33,7 @@
   <meta property="og:title" content="Tugo | Vive la experiencia Tugo"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://tugo.techlatam.la/"/>
-  <meta property="og:image" content="<?= get_template_directory_uri() ?>/images/OG.png"/>
+  <meta property="og:image" content="<?= get_template_directory_uri() ?>/images/Imagen-OG-Tugo"/>
   <meta property="og:site_name" content="Tugo | Vive al experiencia Tugo"/>
   <meta property="og:description" content="Vive la experiancia Tugo como viajero o anfitrion con la unica app que sera capaz de ayudarte a vivir los mejores momentos de tu vida"/>
 
@@ -42,16 +42,33 @@
   <![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+
+
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="all"/>
+
+
+  
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link href="<?php echo home_url(); ?>" rel="index" title="<?php bloginfo('name') ?> - <?php bloginfo('description'); ?>"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+
+
+
+
+
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <?php wp_head(); ?>
+
 
   <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -61,6 +78,7 @@
 <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5b72dc49940588001be3235b&product=inline-share-buttons' async='async'></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120925188-1"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin_light.js"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

@@ -62,7 +62,7 @@
 <!-- Inicio de Caracteristicas -->
 <section class="caracteristicas">
 	<div class="container">
-	<div class="columns caract-contain wow zoomIn">
+	<div class="columns caract-contain wow fadeInUp">
 		<div class="column cols2" align="left">		
 				<img class="caract-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/Path_78.png'; ?>" alt="">
 				<img class="caract-img2" src="<?php the_field('imagen_del_2do_bloque'); ?>" alt="">
@@ -76,6 +76,13 @@
 					</div>
 				</div>
 				<?php 
+				$ani_bene = array();
+				$url=get_template_directory_uri()."/js/lottie/";
+				$ani_bene[0] = $url."a_salvo.json";
+				$ani_bene[1] = $url."a_salvo.json";
+				$ani_bene[2] = $url."tus_reglas.json";
+				$ani_bene[3] = $url."conviertete_en_anfitrion_2.json";
+				
 				$i=0;
 				if( have_rows('contenido_del_2do_bloque') ):
 				    while ( have_rows('contenido_del_2do_bloque') ) : the_row();
@@ -84,7 +91,8 @@
 				   		}
 				    ?>
 					<div class="column col-caract">
-						<img src="<?php the_sub_field('imagen'); ?>"><br>
+						<div style="width: 50% !import;
+    height: 50% !important;" id="logo<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
 						<span class="caract-sub-t"><?php the_sub_field('titulo'); ?></span>
 						<p class="caract-sub-c"><?php the_sub_field('contenido'); ?></p> 
 					</div>
@@ -156,18 +164,88 @@
 <!-- Fin de Caracteristicas -->
 
 
+<style>
+		.des-den {
+		  color: black;
+		  text-decoration: none;
+		}
+
+		.des-fue {
+		  position: relative;
+		}
+		.des-fue:before, .des-fue:after {
+		  content: '';
+		  display: block;
+		  position: absolute;
+		  left: 0;
+		  width: 100%;
+		  background-color: red !important;
+		  -webkit-transform-origin: 0% 50%;
+		          transform-origin: 0% 50%;
+		  transition: -webkit-transform 250ms ease-in-out;
+		  transition: transform 250ms ease-in-out;
+		  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+		  z-index: -10;
+		}
+
+		.des-fue:before {
+		  top: calc(50% - 6px);
+		  height: 18px;
+		  -webkit-transform: scale3d(0, 1, 1);
+		          transform: scale3d(0, 1, 1);
+		}
+		.des-fue:after {
+		  bottom: -10px;
+		  height: 4px;
+		  -webkit-transform: scale3d(1, 1, 1);
+		          transform: scale3d(1, 1, 1);
+		}
+		.des-fue:hover:before, h1:focus:before {
+		  -webkit-transform: scale3d(1, 1, 1);
+		          transform: scale3d(1, 1, 1);
+		}
+		.des-fue:hover:after, h1:focus:after {
+		  -webkit-transform: scale3d(0, 1, 1);
+		          transform: scale3d(0, 1, 1);
+		}
+ </style>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+  <!-- Concept by Camille Raviart -->
+	<h1 class="des-fue"><a class="des-den" href="#">Vendre du rêve</a></h1>
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 <!-- Inicio de Como funciona Tugo -->
 <section class="como-funciona" style='background-position-x: -10px;background-position-y: 303px;background-repeat: no-repeat;background-size: cover;background-image: url("<?php the_field('background_del_3er_bloque'); ?>");'>
 	<div class="container">
-		<div align="center" style="margin-bottom: 18%;padding-top: 47px;" class="wow zoomInUp">
+		<div align="center" style="margin-bottom: 18%;padding-top: 47px;" class="wow fadeInUp">
 			<span class="caract-title com-fun"><?php the_field('titulo_del_3er_bloque'); ?></span>
 			<hr class="caract-hr caract-hr-com">
 		</div>
-	<div class="como-container" class="wow hinge">
-		<div class="wow fadeInLeft">
-			<img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" alt="">
+	<div class="como-container" class="wow fadeInUp">
+		<div class="wow fadeInUp">
+	<!-- 		<img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" alt=""> -->
+
+		  <a href="https://www.youtube.com/watch?v=qDyJrNtSDJQ" data-fancybox>
+		    <img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" />
+		  </a>
 		</div>
-		<div class="columns com-cont wow fadeInRight">
+		<div class="columns com-cont wow fadeInUp">
 			<?php 
 			if( have_rows('contenido_de_3er_bloque') ):
 			    while ( have_rows('contenido_de_3er_bloque') ) : the_row();
@@ -216,22 +294,23 @@
 <!-- Inicio de Beneficios -->
 <section class="beneficios">
 	<div class="container">
-		<div align="center" class="wow bounceInDown" style="padding-top: 37px;">
+		<div align="center" class="wow fadeInUp" style="padding-top: 37px;">
 			<span class="caract-title"><?php the_field('titulo_del_4to_bloque'); ?></span>
 			<hr class="caract-hr hr-bene">
 		</div>
 		<div class="columns bene-con">
 				<?php 
+
 					if( have_rows('contenido_del_4to_bloque') ):
 					    while ( have_rows('contenido_del_4to_bloque') ) : the_row();
 					    ?>
 						<div class="column bene-cols" align="center">
-							<div align="center" class="wow slideInLeft">
+							<div align="center" class="wow fadeInUp">
 								<img class="bene-img" class="como-img" src="<?php the_sub_field('imagen'); ?>" alt=""><br>
 								<span class="bene-ti"><?php the_sub_field('titulo'); ?></span>
 							</div><br>
-							<div class="wow slideInRight">
-								<span class="bene-te"><?php the_sub_field('contenido'); ?></span>
+							<div class="wow fadeInUp">
+								<p class="bene-te"><?php the_sub_field('contenido'); ?></p>
 							</div>
 						</div>
 						<?php
@@ -241,7 +320,7 @@
 					endif;
 				?>
 		</div>
-		<div align="center" style="padding-bottom: 36px;padding-top: 20px;" class="wow fadeIn">
+		<div align="center" style="padding-bottom: 36px;padding-top: 20px;" class="wow fadeInUp">
 			<a class="como-hacer hvr-pulse-grow" style="padding-top: 50px;" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_4to_bloque'); ?></a>
 		</div>
 	</div>
@@ -254,7 +333,7 @@
 	<div align="center" class="soc-tit fadeInUp" style="padding-top: 74px;">
 		<span class="soc-title"><?php the_field('titulo_del_5to_bloque'); ?></span>
 		</div>
-		<div class="columns soc-log wow flipInY">
+		<div class="columns soc-log wow fadeInUp">
 			<?php 
 				if( have_rows('contenido_del_5to_bloque') ):
 				    while ( have_rows('contenido_del_5to_bloque') ) : the_row();
@@ -274,11 +353,11 @@
 
 <!-- Inicio de #lifetugo -->
 
-<section class="life" style='background-image: url("<?php the_field('background_del_6to_bloque'); ?>");'>
+<section class="life" style='background-image: url("<?php the_field('background_del_6to_bloque'); ?>");max-height: 350px;'>
 	<div class="container">
 		<div class="columns">
 			<div class="column life-col1" align="center">
-				<div class="life-col3 wow lightSpeedIn">
+				<div class="life-col3 wow fadeInUp">
 				<?php 
 					if( have_rows('contenido_del_6to_bloque') ):
 					    while ( have_rows('contenido_del_6to_bloque') ) : the_row();
@@ -295,7 +374,7 @@
 				?>
 				</div>
 			</div>
-			<div class="column life-col2 wow rotateIn">
+			<div class="column life-col2 wow fadeInUp">
 				<img class="life-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/cta_v.png'; ?>" alt="">
 			</div>
 		</div>
@@ -318,6 +397,35 @@
 
 
 			});
+
+	var animation = bodymovin.loadAnimation({
+      container: document.getElementById('logo0'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: $("#logo0").data("path")
+    })
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('logo1'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: $("#logo0").data("path")
+    })
+   	var animation = bodymovin.loadAnimation({
+      container: document.getElementById('logo3'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: $("#logo3").data("path")
+    })
+      var animation = bodymovin.loadAnimation({
+      container: document.getElementById('logo2'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: $("#logo2").data("path")
+    })
 		</script>
 
 
