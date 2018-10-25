@@ -46,7 +46,7 @@
 						<?php the_field('titulo_del_header'); ?>
 					</p>
 					<p class="hed_text"><?php the_field('descripcion_del_header'); ?></p>
-					<span class="btn-general button8 sim-button button8nor"><a href="#" style="position:relative;z-index: 99"><?php the_field('boton_del_header'); ?></a></span>
+					<span class="btn-general button8 sim-button button8nor"><a href="#"><?php the_field('boton_del_header'); ?></a></span>
 					</div>
 				</div>
 				<div class="column is-6 header-col2">
@@ -63,7 +63,7 @@
 <!-- Inicio de Caracteristicas -->
 <section class="caracteristicas">
 	<div class="container">
-	<div class="columns caract-contain wow fadeInUp">
+		<div class="columns caract-contain wow fadeInUp">
 		<div class="column cols2" align="left">		
 				<img class="caract-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/Path_78.png'; ?>" alt="">
 				<img class="caract-img2" src="<?php the_field('imagen_del_2do_bloque'); ?>" alt="">
@@ -79,21 +79,20 @@
 				<?php 
 				$ani_bene = array();
 				$url=get_template_directory_uri()."/js/lottie/";
-				$ani_bene[0] = $url."";
-				$ani_bene[1] = $url."";
-				$ani_bene[2] = $url."";
-				$ani_bene[3] = $url."";
+				$ani_bene[0] = $url."seguridad.json";
+				$ani_bene[1] = $url."seguridad.json";
+				$ani_bene[2] = $url."tus_reglas.json";
+				$ani_bene[3] = $url."anfitrion.json";
 				
 				$i=0;
 				if( have_rows('contenido_del_2do_bloque') ):
 				    while ( have_rows('contenido_del_2do_bloque') ) : the_row();
 				   		if ($i==0 || $i==2) {
-				   			?><div class="columns col-caract2" style="margin-top: -40px;"><?php
+				   			?><div class="columns col-caract2"><?php
 				   		}
 				    ?>
 					<div class="column col-caract">
-						<div style="width: 50% !import;
-    height: 50% !important;" id="logo<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
+						<div class="anima-lottie" id="logo<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
 						<span class="caract-sub-t"><?php the_sub_field('titulo'); ?></span>
 						<p class="caract-sub-c"><?php the_sub_field('contenido'); ?></p> 
 					</div>
@@ -107,7 +106,7 @@
 				    // no rows found
 				endif;
 				 ?>
-				 <div align="center" style="padding-top: 40px;">
+				 <div align="left" class="accion-caract">
 					<span class="des-fue"><a class="des-den como-hacer com" href="#"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a></span>
 				</div>
 			</div>
@@ -117,11 +116,11 @@
 
 
 
-	<div align="center" class="tit-tab" style="display: none;">
+	<div align="center" class="tit-tab">
 		<span class="caract-tab"><?php the_field('titulo_del_2do_bloque'); ?></span>
 		<hr class="hr-tab">
 	</div>
-	<div class="columns tab-tab" style="display: none;">
+	<div class="columns tab-tab" style="display: none">
 		<?php 
 				$i=0;
 				if( have_rows('contenido_del_2do_bloque') ):
@@ -166,16 +165,14 @@
 <!-- Fin de Caracteristicas -->
 
 <!-- Inicio de Como funciona Tugo -->
-<section class="como-funciona" style='background-position-x: -10px;background-position-y: 303px;background-repeat: no-repeat;background-size: cover;background-image: url("<?php the_field('background_del_3er_bloque'); ?>");'>
+<section class="como-funciona" style='background-image: url("<?php the_field('background_del_3er_bloque'); ?>");'>
 	<div class="container">
-		<div align="center" style="margin-bottom: 18%;padding-top: 47px;" class="wow fadeInUp">
+		<div align="center" class="wow fadeInUp tit-como">
 			<span class="caract-title com-fun"><?php the_field('titulo_del_3er_bloque'); ?></span>
 			<hr class="caract-hr caract-hr-com">
 		</div>
 	<div class="como-container" class="wow fadeInUp">
 		<div class="wow fadeInUp">
-	<!-- 		<img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" alt=""> -->
-
 		  <a href="https://www.youtube.com/watch?v=qDyJrNtSDJQ" data-fancybox>
 		    <img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" />
 		  </a>
@@ -229,19 +226,23 @@
 <!-- Inicio de Beneficios -->
 <section class="beneficios">
 	<div class="container">
-		<div align="center" class="wow fadeInUp" style="padding-top: 37px;">
+		<div align="center" class="wow fadeInUp tit-bene">
 			<span class="caract-title"><?php the_field('titulo_del_4to_bloque'); ?></span>
 			<hr class="caract-hr hr-bene">
 		</div>
 		<div class="columns bene-con">
 				<?php 
-
+					$ani_bene[0] = $url."economiza.json";
+					$ani_bene[1] = $url."mensajeria_2.json";
+					$ani_bene[2] = $url."descubre.json";
+					$i=0;
 					if( have_rows('contenido_del_4to_bloque') ):
 					    while ( have_rows('contenido_del_4to_bloque') ) : the_row();
 					    ?>
 						<div class="column bene-cols" align="center">
 							<div align="center" class="wow fadeInUp">
-								<img class="bene-img" class="como-img" src="<?php the_sub_field('imagen'); ?>" alt=""><br>
+								<div class="anima-lottie" id="bene<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
+								<!-- <img class="bene-img" class="como-img" src="<?php the_sub_field('imagen'); ?>" alt=""><br> -->
 								<span class="bene-ti"><?php the_sub_field('titulo'); ?></span>
 							</div><br>
 							<div class="wow fadeInUp">
@@ -249,13 +250,14 @@
 							</div>
 						</div>
 						<?php
+							$i++;
 					    endwhile;
 					else :
 					    // no rows found
 					endif;
 				?>
 		</div>
-		<div align="center" style="padding-bottom: 36px;padding-top: 20px;" class="wow fadeInUp">
+		<div align="center" class="wow fadeInUp accion-bene">
 			<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_4to_bloque'); ?></a></span>
 		</div>
 	</div>
@@ -263,9 +265,9 @@
 <!-- Fin de beneficios -->
 
 <!-- Inicio de Socios -->
-<section class="socios" style='height: 352px;background-image: url("<?php the_field('background_del_5to_bloque'); ?>");'>
+<section class="socios" style='background-image: url("<?php the_field('background_del_5to_bloque'); ?>");'>
 	<div class="container">
-	<div align="center" class="soc-tit fadeInUp" style="padding-top: 74px;">
+	<div align="center" class="soc-tit fadeInUp">
 		<span class="soc-title"><?php the_field('titulo_del_5to_bloque'); ?></span>
 		</div>
 		<div class="columns soc-log wow fadeInUp">
@@ -288,7 +290,7 @@
 
 <!-- Inicio de #lifetugo -->
 
-<section class="life" style='background-image: url("<?php the_field('background_del_6to_bloque'); ?>");max-height: 350px;'>
+<section class="life" style='background-image: url("<?php the_field('background_del_6to_bloque'); ?>");'>
 	<div class="container">
 		<div class="columns">
 			<div class="column life-col1" align="center">
@@ -299,8 +301,8 @@
 					    ?>
 							<span class="experience"><?php the_sub_field('titulo'); ?></span><br>
 							<span class="hash"><?php the_sub_field('subtitulo'); ?></span><br>
-							<div style="margin-top: 31px;">
-							<span class="btn-general button8 sim-button button8nor"><a class="btn-con" style="position:relative;z-index: 99" href=""><?php the_sub_field('boton'); ?></a></span>
+							<div class="accion-descarga">
+								<span class="btn-general button8 sim-button button8nor"><a class="btn-con" href=""><?php the_sub_field('boton'); ?></a></span>
 							</div>
 						<?php
 					    endwhile;
@@ -317,10 +319,13 @@
 </section>
 
 
-			
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
 		<script>
+
+
+
+
 			$(document).ready(function() {
 
 			    $('.responsive').slick({
@@ -329,38 +334,79 @@
 				  autoplay: true,
 				  autoplaySpeed: 2000,
 			    });
-
-
 			});
+									
 
-	var animation = bodymovin.loadAnimation({
-      container: document.getElementById('logo0'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: $("#logo0").data("path")
-    })
-    var animation = bodymovin.loadAnimation({
-      container: document.getElementById('logo1'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: $("#logo0").data("path")
-    })
-   	var animation = bodymovin.loadAnimation({
-      container: document.getElementById('logo3'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: $("#logo3").data("path")
-    })
-      var animation = bodymovin.loadAnimation({
-      container: document.getElementById('logo2'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: $("#logo2").data("path")
-    })
+			function AnimacionCaracteristicas(id) {	
+
+				$('#'+id).waypoint(function(direction){
+				    jQuery(document).ready(function() {
+						    setTimeout(function() {
+									var animation = bodymovin.loadAnimation({
+								      container: document.getElementById(id),
+								      renderer: 'svg',
+								      loop: false,
+								      autoplay: true,
+								      path: $("#"+id).data("path")
+								    })
+						    }, 300);
+						});
+				    this.destroy()
+				  },  
+				{ 
+				  offset: '75%'
+				});
+			}
+
+
+			for (var i = 0; i <= 3; i++) {
+				AnimacionCaracteristicas("logo"+i);	
+				AnimacionCaracteristicas("bene"+i);	
+			}
+
+
+
+
+
+
+
+
+// jQuery(document).ready(function() {
+//     setTimeout(function() {
+// 			var animation = bodymovin.loadAnimation({
+// 		      container: document.getElementById('logo0'),
+// 		      renderer: 'svg',
+// 		      loop: true,
+// 		      autoplay: false,
+// 		      path: $("#logo0").data("path")
+// 		    })
+//     }, 2000);
+// });
+
+
+    // var animation = bodymovin.loadAnimation({
+    //   container: document.getElementById('logo1'),
+    //   renderer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   path: $("#logo1").data("path")
+    // })
+
+    // var animation = bodymovin.loadAnimation({
+    //   container: document.getElementById('logo2'),
+    //   renderer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   path: $("#logo2").data("path")
+    // })
+
+   	// var animation = bodymovin.loadAnimation({
+    //   container: document.getElementById('logo3'),
+    //   renderer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   path: $("#logo3").data("path")
+    // })
 		</script>
 
 

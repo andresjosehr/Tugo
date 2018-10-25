@@ -230,6 +230,10 @@ body {
   color: #fc782a;
 }
 
+.anima-lottie{
+  width: 32% !important; 
+  height: 32% !important;
+}
 
 
 .sim-button{
@@ -241,6 +245,9 @@ body {
   margin-top: 125px;
   width: 60%;
   cursor: pointer;
+  position:relative;
+  z-index: 99;
+
 }
 .button8:hover{
   -webkit-transition: all 0.3s;

@@ -54,6 +54,9 @@ font-weight: 600;
 	font-size: 36px;
 	font-weight: 800;
 }
+.soc-tit{
+	padding-top: 74px;
+}
 .socios{
 	
 	background-color: white; 
@@ -69,6 +72,7 @@ font-weight: 600;
 
 .bene-con{
 	margin: 5%;
+	margin-top: 0;
 }
 
 .bene-ti{
@@ -118,6 +122,10 @@ font-weight: 600;
 .como-funciona{
 	margin-top: 50px;
 	background-color: white;
+	background-position-x: -10px;
+	background-position-y: 303px;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 }
 .com-cont{
@@ -242,6 +250,12 @@ color: white;
 	color:white;
 
 }
+.accion-caract{
+	margin-top: -40px;
+}
+.accion-descarga{
+	margin-top: 31px;
+}
 
 
 .btn-general a{
@@ -361,6 +375,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 			.col-caract2{
 				text-align: center;
 				display: flex !important;
+				margin-top: -40px;
 			}
 			.caract-img {
 			    z-index: 0;
@@ -415,6 +430,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 }
 
 .tit-tab{
+	display: none;
 	margin-top: 37px;
 	margin-bottom: -40px;
 }
@@ -423,6 +439,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 	color: #141414;
 	font-size: 38px;
 	font-weight: 700;
+}
+.tit-como{
+	margin-bottom: 18%;
+	padding-top: 47px;
+}
+.tit-bene{
+	padding-top: 37px;
+}
+.accion-bene{
+	padding-bottom: 36px;
+	padding-top: 20px
 }
 
 .hr-tab{
@@ -463,10 +490,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 		.socios{
 		background-repeat: no-repeat;
 		background-size: 102%;
+		height: 352px;
 	}
 		.life{
 		background-repeat: no-repeat;
 		background-size: 117%;
+		max-height: 350px;
 	}
 	.header-viajero{
 		background-repeat: no-repeat;
@@ -502,7 +531,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 		@media only screen and (min-width: 769px)  {
 			
 			.caract-col1{
-				margin-top: 3%;
+				margin-top: 1%;
 				margin-left: 520px;
 			}
 

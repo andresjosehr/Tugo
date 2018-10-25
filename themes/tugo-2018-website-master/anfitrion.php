@@ -56,15 +56,21 @@
 					<span class="caract-title"><?php the_field('titulo_del_bloque_2'); ?></span><hr class="anf-hr ray"><br><br>
 				</div>
 					<?php 
+									$ani_bene = array();
+									$url=get_template_directory_uri()."/js/lottie/";
+									$ani_bene[0] = $url."tiro_blanco_2.json";
+									$ani_bene[1] = $url."planifica_2.json";
+									$ani_bene[2] = $url."monetiza.json";
+									$ani_bene[3] = $url."conecta.json";
 						$i=0;
 						if( have_rows('contenido_del_bloque_2') ):
 						    while ( have_rows('contenido_del_bloque_2') ) : the_row();
 						    	if ($i==0 || $i==2) {
-						    		?><div class="columns caract-cols" style="margin-top: -40px;"><?php
+						    		?><div class="columns caract-cols" style="margin-top: -65px;"><?php
 						    	}
 						    ?>
 							<div class="column wow fadeInUp">
-								<img src="<?php the_sub_field('imagen'); ?>"><br>
+								<div class="anima-lottie" id="logo<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
 								<span class="caract-sub-t"><?php the_sub_field('subtitulo'); ?></span>
 								<p class="caract-sub-c"><?php the_sub_field('contenido'); ?></p> 
 							</div>
@@ -78,7 +84,9 @@
 						    // no rows found
 						endif;
 					?>
+					<div style="    margin-top: -40px;">
 				<span class="des-fue"><a class="des-den como-hacer com" href="<?php echo site_url(); ?>/tutoriales"><?php the_field('llamada_a_la_accion_del_2do_bloque'); ?></a></span>
+				</div>
 			</div>
 			<div class="column caract-img-g1" align="left">
 				<img class="anf-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/Path_79-1.png'; ?>" alt="">
@@ -139,6 +147,10 @@
 	</div>
 	<div class="columns pasos4">
 			<?php 
+									$ani_bene[0] = $url."descarga_app.json";
+									$ani_bene[1] = $url."conviertete_anfitrion.json";
+									$ani_bene[2] = $url."perfil.json";
+									$ani_bene[3] = $url."crea_experiencia_2.json";
 			$i=0;
 				if( have_rows('contenido_del_3er_bloque') ):
 				    while ( have_rows('contenido_del_3er_bloque') ) : the_row();
@@ -148,8 +160,7 @@
 				    ?>
 					<div class="columns wow fadeInUp">
 						<div class="column" align="center">
-							<span class="pasos-num"><?php the_sub_field('paso_nº'); ?></span>
-							<img class="pasos-img" src="<?php the_sub_field('imagen'); ?>" alt=""><br>
+							<div class="anima-lottie" id="bene<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
 							<span class="pasos-subti"><?php the_sub_field('ttitulo'); ?></span><br><br>
 							<p class="pasos-text"><?php the_sub_field('contenido'); ?></p>
 						</div>
@@ -232,6 +243,7 @@
 								<?php 
 								$i=0;
 									if( have_rows('contenido_del_4to_bloque') ):
+
 									    while ( have_rows('contenido_del_4to_bloque') ) : the_row();
 									    ?>
 											<span class="porque-text-comi">“</span>
@@ -294,16 +306,20 @@
 	<div class="container">
  	<div class="columns">
 		<?php 
+			$ani_bene[0] = $url."experiencias_tuyas.json";
+			$ani_bene[1] = $url."como_monetizas.json";
+			$k=0;
 		$i=1;
 			if( have_rows('contenido_del_5to_bloque') ):
 			    while ( have_rows('contenido_del_5to_bloque') ) : the_row();
 			    ?>
 				 		<div class="column cols wow fadeInUp" align="center">
-				 			<img class="cas<?php echo $i ?>" src="<?php the_sub_field('imagen'); ?>" alt=""><br>
+				 			<div class="anima-lottie" id="como<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
 				 			<span class="info-title"><?php the_sub_field('titulo'); ?></span>
 				 			<p class="info-text"><?php the_sub_field('contenido'); ?></p>	
 				 		</div>
 				<?php
+				$k++;
 				$i++;
 			    endwhile;
 			else :
@@ -423,6 +439,7 @@
 			?>
 			</div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <script>
 			$(document).ready(function() {
 
@@ -451,6 +468,40 @@
 			$(".slick-next").empty()
 			$(".slick-next").prepend("<i style='color:white' class='fas fa-angle-right'></i>");
 			});
+
+
+
+
+
+
+
+						function AnimacionCaracteristicas(id) {	
+
+				$('#'+id).waypoint(function(direction){
+				    jQuery(document).ready(function() {
+						    setTimeout(function() {
+									var animation = bodymovin.loadAnimation({
+								      container: document.getElementById(id),
+								      renderer: 'svg',
+								      loop: false,
+								      autoplay: true,
+								      path: $("#"+id).data("path")
+								    })
+						    }, 300);
+						});
+				    this.destroy()
+				  },  
+				{ 
+				  offset: '75%'
+				});
+			}
+
+
+			for (var i = 0; i <= 3; i++) {
+				AnimacionCaracteristicas("logo"+i);	
+				AnimacionCaracteristicas("bene"+i);	
+				AnimacionCaracteristicas("como"+i);	
+			}
 
 
 		</script>
