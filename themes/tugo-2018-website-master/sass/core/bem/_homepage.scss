@@ -6,10 +6,10 @@
 	background-color: #f5f5f5;
 }
 .life-img{
-	    margin-top: -95px;
+	    margin-top: -50px;
 }
 .life-col1{
-	    margin-top: 75px;
+	    margin-top: 45px;
 }
 .btn-con{
 color: #f5f5f5;
@@ -32,15 +32,13 @@ font-weight: 300;
 .experience{
 
 color: white;
-font-size: 30px;
+font-size: 18px;
 font-weight: 600;
 
 }
 
 .life{
-	
 	height: 390px;
-
 }
 
 .soc-log{
@@ -80,12 +78,10 @@ font-weight: 600;
 	height: 33px;
 	color: #fc6f31;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .bene-te{
-
-	width: 319px;
 	height: 57px;
 	color: #707070;
 	font-size: 13px;
@@ -98,7 +94,7 @@ font-weight: 600;
 
 	color: white;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 
 
 }
@@ -182,7 +178,7 @@ color: white;
   margin-top: 250px;
 }
 .caract-sub-c{
-	padding: 0px 0px 40px;
+	padding: 0px 0px 0px;
 	color: #6a6a6a;
 	font-size: 13px;
 	font-weight: 600;
@@ -193,7 +189,7 @@ color: white;
 
 	color: #fb623b;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 
 }
 
@@ -201,7 +197,7 @@ color: white;
     margin: 78px 4% 0% 3%;
 	color: #fb623b;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 
 }
 
@@ -223,7 +219,7 @@ color: white;
 }
 
 .caract-contain{
-	margin-top: 50px;
+	margin-top: 125px;
 	margin-left: 8%;
 	margin-right: 8%;
 }
@@ -283,7 +279,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 	    background-color: #ff660c !important;
 	}
 	.button8nor:hover{
-	  border: 0px solid #f26f21;
+	  border: 0px solid #7C34F9;
 	  color: #fff !important;
 	}
 
@@ -298,7 +294,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 	    padding: 32% 11% 0;
 	}
 	.hed_row2{
-		margin-top: 120px;
+		margin-top: 68px;
 		margin-right: 10%;
 	}
     .hed_content{
@@ -307,7 +303,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 	.header-viajero {
 
 		background-position: 0px -200px;
+
 	}
+	.zoom-in{
+
+		transition: transform 20s;
+
+	}
+
 	.hed_title{
 		border: 1px solid rgba(0, 0, 0, 0);
 		color: #ffffff;
@@ -340,6 +343,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 
 
 @media only screen and (max-width: 769px) {
+	.cst-d{
+		display: none;
+	}
 	.socios{
 		height: 400px !important;
 	}
@@ -371,11 +377,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 			    height: 725px;
 			}
 
+			.col-caract{
+				display: flex;
+			}
+			
+			.caract-sub-c{
+				text-align: left;
+			}
 
 			.col-caract2{
 				text-align: center;
-				display: flex !important;
-				margin-top: -40px;
+				/*display: flex !important;*/
+				/*margin-top: -40px;*/
 			}
 			.caract-img {
 			    z-index: 0;
@@ -431,7 +444,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 
 .tit-tab{
 	display: none;
-	margin-top: 37px;
+	margin-top: 13%;
 	margin-bottom: -40px;
 }
 
@@ -445,7 +458,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 	padding-top: 47px;
 }
 .tit-bene{
-	padding-top: 37px;
+	padding-top: 50px;
 }
 .accion-bene{
 	padding-bottom: 36px;
@@ -479,7 +492,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 	}
 
 	.cac-anf{
-		height: 588px;
+		height: 688px;
 	}
 }
 
@@ -529,10 +542,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 
 	}
 		@media only screen and (min-width: 769px)  {
-			
+			.caract-sub-c {
+				    margin-top: -10px;
+			}
+			.col-caract2{
+				margin-top: -45px;
+			}
 			.caract-col1{
 				margin-top: 1%;
 				margin-left: 520px;
+			}
+
+			.cst-r{
+				display: none;
 			}
 
 
@@ -565,6 +587,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 		}
 
 
+@media only screen and (max-width: 769px){
+
+	body {
+    overflow-x: hidden;
+	}
+	.como-img {
+		width: 103%;
+    		margin-left: -6.5%;
+	}
+}
+
 
 	
 
@@ -579,7 +612,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 				margin-right: 223px;
 			}
 			.experience {
-			    font-size: 23px;
+			    font-size: 18px;
 			}
 			.ray {
 			    margin-right: 118px;
@@ -589,3 +622,87 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', end
 
 
 		
+
+
+
+		@media only screen and (min-width: 769px){
+	.caract-col1{
+
+		width: 48% !important;
+
+	}
+	.accion-caract{
+		text-align: center;
+	}
+
+	div .anima-lottie3{
+		width: 25% !important;
+	}
+}
+@media only screen and (max-width: 769px){
+	.caract-cols{
+		margin-top: 0px;
+	}
+	#bene1{
+		width: 93px!important;
+    	margin-left: -48px;
+    	margin-right: 11px;
+	}
+	.text-bene{
+		    margin-left: 22px;
+		    margin-bottom: 65px;
+	}
+	section div div .anima-lottie-bene{
+	    width: 63px!important;
+	    margin-top: -6px;
+	    margin-right: 25px;
+	    margin-left: -32px;
+	}
+	.bene-te{
+		    padding-top: 12px;
+	}
+	.bene-cols{
+		display: flex;
+		    margin-bottom: 31px;
+	}
+
+	.accion-caract{
+		text-align: center;
+	}
+	section div .anima-lottie-bene{
+		width: 65% !important;
+	}
+	.anima-lottie {
+        width: 125px!important;
+	}
+	div .anima-lottie3 {
+    	width: 125px!important;
+	}
+	.title-caract {
+    	margin-bottom: 50px;
+	}
+	.tit-como{
+		    margin-bottom: 88px;
+
+	}
+	div .accion-caract {
+    		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.como-funciona{
+		background-position-y: 9rem !important;
+	}
+
+}
+
+div .anima-lottie-bene{
+	width: 45% !important;
+	margin-top: -12px;
+    margin-bottom: -29px;
+}
+
+
+
+

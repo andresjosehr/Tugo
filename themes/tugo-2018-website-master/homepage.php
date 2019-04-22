@@ -12,9 +12,15 @@
 ?>
 
 <style>
+body{
+	overflow-x: hidden;
+}
 	.slick-prev:before {
 		color: black !important;
 	}
+/*	.button8:hover .btn-header {
+    	color: #fff !important;
+	}*/
 </style>
 
 
@@ -35,8 +41,16 @@
   </div>
   <!-- END The overlay -->
 
+  <style>
+  	.button8nor:hover a{
+			color: #fc6f31!important;
+			position: relative;
+    		z-index: 999;
+  	}
+  </style>
+
 <!-- Comienzo de Header -->
-<section class="header-viajero" style='background-image: url("<?php the_field('background_header'); ?>);");'>
+<section class="header-viajero zoom-in" style='background-image: url("<?php the_field('background_header'); ?>");'>
 	<div class="container">
 		<div class="hed_content">
 			<div class="columns">
@@ -46,12 +60,13 @@
 						<?php the_field('titulo_del_header'); ?>
 					</p>
 					<p class="hed_text"><?php the_field('descripcion_del_header'); ?></p>
-					<span class="btn-general button8 sim-button button8nor"><a href="#"><?php the_field('boton_del_header'); ?></a></span>
+					<span class="btn-general button8 sim-button button8nor"><a class="btn-header" href="#"><?php the_field('boton_del_header'); ?></a></span>
 					</div>
 				</div>
 				<div class="column is-6 header-col2">
 					<div class="hed_row2 column-head-2">
-					<img src="<?php the_field('imagen_del_header'); ?>" alt="">
+					<div style="height: 45% !important" id="Op2" data-path="<?php echo get_template_directory_uri() ?>/js/lottie/viajero/Op2.json"></div>
+					<!-- <img src="<?php the_field('imagen_del_header'); ?>" alt=""> -->
 					</div>
 				</div>
 			</div>
@@ -59,6 +74,12 @@
 	</div>
 </section>
 <!-- Fin de header -->
+
+<style>
+	
+
+
+</style>
 
 <!-- Inicio de Caracteristicas -->
 <section class="caracteristicas">
@@ -77,14 +98,14 @@
 					</div>
 				</div>
 				<?php 
-				$ani_bene = array();
-				$url=get_template_directory_uri()."/js/lottie/";
-				$ani_bene[0] = $url."seguridad.json";
-				$ani_bene[1] = $url."seguridad.json";
-				$ani_bene[2] = $url."tus_reglas.json";
-				$ani_bene[3] = $url."anfitrion.json";
-				
-				$i=0;
+					$ani_bene = array();
+					$url=get_template_directory_uri()."/js/lottie/";
+					$ani_bene[0] = $url."seguridad.json";
+					$ani_bene[1] = $url."seguridad.json";
+					$ani_bene[2] = $url."tus_reglas.json";
+					$ani_bene[3] = $url."anfitrion.json";
+					
+					$i=0;
 				if( have_rows('contenido_del_2do_bloque') ):
 				    while ( have_rows('contenido_del_2do_bloque') ) : the_row();
 				   		if ($i==0 || $i==2) {
@@ -92,9 +113,12 @@
 				   		}
 				    ?>
 					<div class="column col-caract">
-						<div class="anima-lottie" id="logo<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
-						<span class="caract-sub-t"><?php the_sub_field('titulo'); ?></span>
-						<p class="caract-sub-c"><?php the_sub_field('contenido'); ?></p> 
+						<!-- <div class="anima-caract"> -->
+							<div style="margin-top: 10px;margin-left: -15px;margin-right: 24px;" class="anima-lottie <?php if ($i==3): ?> anima-lottie3 <?php endif ?>" id="logo<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
+						<!-- </div> -->
+						<span class="caract-sub-t cst-d"><?php the_sub_field('titulo'); ?></span>
+						
+						<p class="caract-sub-c"><span class="caract-sub-t cst-r"><?php the_sub_field('titulo'); ?></span><br><?php the_sub_field('contenido'); ?></p> 
 					</div>
 					<?php
 					if ($i==1 || $i==3) {
@@ -135,6 +159,7 @@
 				    ?>
 					<div class="columns">
 						<div class="column">
+							<div class="anima-lottie" id="logores<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
 							<span class="caract-sub-t2"><?php the_sub_field('titulo'); ?></span>
 							<p class="caract-sub-c"><?php the_sub_field('contenido'); ?></p> 
 						</div>
@@ -174,10 +199,10 @@
 	<div class="como-container" class="wow fadeInUp">
 		<div class="wow fadeInUp">
 		  <a href="https://www.youtube.com/watch?v=qDyJrNtSDJQ" data-fancybox>
-		    <img class="como-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/iPad_Mockup.png'; ?>" />
+		    <img class="como-img" src="<?php the_field('imagen_del_3er_bloque'); ?>" />
 		  </a>
 		</div>
-		<div class="columns com-cont wow fadeInUp">
+		<div class="columns com-cont wow fadeInUp" style="padding-top: 10px;">
 			<?php 
 			if( have_rows('contenido_de_3er_bloque') ):
 			    while ( have_rows('contenido_de_3er_bloque') ) : the_row();
@@ -194,7 +219,7 @@
 			 ?>
 		</div>
 		<div class="content">
-			<div class="slider responsive">
+			<div class="slider responsive resp-bene">
 			<?php 
 			if( have_rows('contenido_de_3er_bloque') ):
 				  while ( have_rows('contenido_de_3er_bloque') ) : the_row();
@@ -212,7 +237,7 @@
 				</div>
 			</div>
 			<div align="center" class="com-btn wow fadeInUp">
-				<span class="des-fue"><a class="des-den como-hacer2 com-accion" href="<?php echo site_url(); ?>/tutoriales">¿Cómo lo hago? >></a></span>
+				<span class="des-fue como-fun-acc"><a class="des-den como-hacer2 com-accion" href="<?php echo site_url(); ?>/tutoriales">¿Cómo lo hago? >></a></span>
 			</div>
 		</div>
 		</div>
@@ -240,12 +265,12 @@
 					    while ( have_rows('contenido_del_4to_bloque') ) : the_row();
 					    ?>
 						<div class="column bene-cols" align="center">
-							<div align="center" class="wow fadeInUp">
-								<div class="anima-lottie" id="bene<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
-								<!-- <img class="bene-img" class="como-img" src="<?php the_sub_field('imagen'); ?>" alt=""><br> -->
-								<span class="bene-ti"><?php the_sub_field('titulo'); ?></span>
-							</div><br>
+							<div align="center" class="wow fadeInUp text-bene">
+								<div class="anima-lottie3 anima-lottie-bene <?php if ($i==1): ?> anima-lottie-bene <?php endif ?>" id="bene<?php echo $i ?>" data-path="<?php echo $ani_bene[$i] ?>"></div>
+							</div>
 							<div class="wow fadeInUp">
+								<span class="bene-ti"><?php the_sub_field('titulo'); ?></span>
+								<br>
 								<p class="bene-te"><?php the_sub_field('contenido'); ?></p>
 							</div>
 						</div>
@@ -272,13 +297,17 @@
 		</div>
 		<div class="columns soc-log wow fadeInUp">
 			<?php 
+			$i=0;
 				if( have_rows('contenido_del_5to_bloque') ):
 				    while ( have_rows('contenido_del_5to_bloque') ) : the_row();
 				    ?>
+				    <?php if ($i!=2): ?>
 					<div class="column" align="center">
 						<img src="<?php the_sub_field('logo_socio'); ?>" alt="">
 					</div>
+					<?php endif ?>
 					<?php
+					$i++;
 				    endwhile;
 				else :
 				endif;
@@ -287,13 +316,26 @@
 	</div>
 </section>
 <!-- Fin de socios -->
+<style>
+	#cta_principal{
+		height: 480px !important;
+		position: relative;
+		top: -75px;
+	}
+
+		@media only screen and (max-width: 950px)  {
+				div #cta_principal{
+					height: 594px !important;
+				}
+			}
+</style>
 
 <!-- Inicio de #lifetugo -->
 
 <section class="life" style='background-image: url("<?php the_field('background_del_6to_bloque'); ?>");'>
 	<div class="container">
 		<div class="columns">
-			<div class="column life-col1" align="center">
+			<div class="column life-col1 life-col1-anf" align="center">
 				<div class="life-col3 wow fadeInUp">
 				<?php 
 					if( have_rows('contenido_del_6to_bloque') ):
@@ -312,7 +354,7 @@
 				</div>
 			</div>
 			<div class="column life-col2 wow fadeInUp">
-				<img class="life-img" src="<?php echo get_site_url().'/wp-content/uploads/2018/10/cta_v.png'; ?>" alt="">
+				<div id="cta_principal" data-path="<?php echo get_template_directory_uri() ?>/js/lottie//cta_principal.json"></div>
 			</div>
 		</div>
 	</div>
@@ -321,12 +363,26 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
+		<style>
+			@media only screen and (min-width: 769px)  {
+				.resp-bene{
+					display: none
+				}
+			}
+		</style>
+
 		<script>
 
 
 
-
 			$(document).ready(function() {
+			
+
+				var width = $(window).width();
+
+				if (width<=769) {
+					$('.anima-caract').attr('align','center');
+				}
 
 			    $('.responsive').slick({
 				  slidesToShow: 1,
@@ -335,38 +391,51 @@
 				  autoplaySpeed: 2000,
 			    });
 			});
-									
+
+								
+
+
+
+
 
 			function AnimacionCaracteristicas(id) {	
 
-				$('#'+id).waypoint(function(direction){
-				    jQuery(document).ready(function() {
-						    setTimeout(function() {
+									var squares = document.getElementById(id);
 									var animation = bodymovin.loadAnimation({
-								      container: document.getElementById(id),
+								      container: squares,
 								      renderer: 'svg',
 								      loop: false,
 								      autoplay: true,
 								      path: $("#"+id).data("path")
 								    })
-						    }, 300);
-						});
-				    this.destroy()
-				  },  
-				{ 
-				  offset: '75%'
-				});
+
+										squares.addEventListener("mouseenter", function () {
+										   animation.goToAndPlay(0);
+										 });
 			}
 
+
+			AnimacionCaracteristicas("Op2");
+			AnimacionCaracteristicas("cta_principal");
 
 			for (var i = 0; i <= 3; i++) {
 				AnimacionCaracteristicas("logo"+i);	
-				AnimacionCaracteristicas("bene"+i);	
+				AnimacionCaracteristicas("logores"+i);
+				AnimacionCaracteristicas("bene"+i);
 			}
 
+										// var squares = document.getElementById("logo0");
+										// var animation = bodymovin.loadAnimation({
+								  //     container: squares,
+								  //     renderer: 'svg',
+								  //     loop: false,
+								  //     autoplay: true,
+								  //     path: $("#logo0").data("path")
+								  //   })
 
-
-
+										// squares.addEventListener("mouseenter", function () {
+										//   animation.goToAndPlay(0);
+										// });
 
 
 

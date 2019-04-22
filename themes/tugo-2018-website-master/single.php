@@ -1,12 +1,20 @@
 <?php get_header(); ?>
 
 
-<section class="single" style='background-image: url("<?php echo get_site_url().'/wp-content/uploads/2018/09/sinblog.png'; ?>");'>
+<style>
+	.single{
+		background-position: cover;
+		background-repeat: no-repeat; 
+	}
+</style>
+
+<section class="single" style='background-image: url("<?php echo get_site_url().'/wp-content/uploads/2018/11/ima-art.png'; ?>");'>
 
 </section>
 
 
 <article class="art-single">
+
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php $url = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
 

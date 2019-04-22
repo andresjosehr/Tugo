@@ -456,18 +456,35 @@ function Scripts(){
         $('.prin').css("background-color", "#FFF");
         $( ".menu-item-181 a" ).addClass( "button8 button8top sim-button" );
         $( ".menu-item-181 a" ).removeClass( "button8normor" );
-        $('.prin').css("height", "125px");
-        $('.prin a').css("color", "#fb623b");
+        $('.prin').css("height", "86px");
+        $('.prin a').css("color", "black");
 		    $('.prin .menu-item-181 a').css("color", "#FFF");
         $('.prin .header__menu--button a').css("background-color", "#2454D6");
-        $('.prin .header__menu--button a').css("color", "#FFF");
         $('.prin .header__menu--button a').css("color", "#FFF");
         $('.prin .header__logo img').attr("src", $('.header__logo img').data("light"));
         $('.prin #nav-icon3 span').css("background-color", "#2454D6");
         $(".img-prin").attr("src","<?php echo site_url(); ?>/wp-content/uploads/2018/10/logo-nan.svg");
 
+        var width = $(window).width();
+          if (width>1000) {
+            
+            $( ".prin .menu-item" ).addClass( "des-fue2" );
+            $( ".prin .menu-item" ).addClass( "des-fue" );             
+            $( ".prin .menu-item a" ).addClass( "des-den" );
 
+            $( ".prin .menu-item-181" ).removeClass( "pasosanf-accion" );
+            $( ".prin .menu-item-181" ).removeClass( "des-fue2" );
+            $( ".prin .menu-item-181" ).removeClass( "des-fue" );              
+            $( ".prin .menu-item-181 a" ).removeClass( "com-unic" );
+            $( ".prin .menu-item-181 a" ).removeClass( "des-den" );
 
+        }
+
+        $('.prin').css("transition-property", "background-color, height");
+        $('.prin').css("transition-duration", "1s");
+
+        $('.sec').css("height", "86px");
+        $('.sec').css("transition-duration", "1s");
 
     }
     else {
@@ -483,8 +500,45 @@ function Scripts(){
         $('.prin .header__logo').css("filter", "invert(0%)");
         $(".img-prin").attr("src","<?php bloginfo('template_directory'); ?>/images/logo_header.png");
 
+
+        var width = $(window).width();
+        if (width>1000) {
+                 $( ".prin .menu-item" ).addClass( "como-fun-acc" );
+                  $( ".prin .menu-item" ).addClass( "des-fue" );             
+                  $( ".prin .menu-item a" ).addClass( "des-den" );
+                  $( ".prin .menu-item a" ).addClass( "como-hacer2" );
+
+
+                  $( ".prin .menu-item" ).removeClass( "pasosanf-accion" );
+                  $( ".prin .menu-item a" ).removeClass( "com-unic" );
+                  $( ".prin .menu-item a" ).removeClass( "des-den" );
+
+                  $( ".prin .menu-item-181" ).removeClass( "como-fun-acc" );
+                  $( ".prin .menu-item-181" ).removeClass( "des-fue" );           
+                  $( ".prin .menu-item-181 a" ).removeClass( "des-den" );
+                  $( ".prin .menu-item-181 a" ).removeClass( "como-hacer2" );
+        }
+
+
+        $('.prin').css("transition-property", "background-color, height");
+        $('.prin').css("transition-duration", "1s");
+
+        $('.sec').css("height", "125px");
+        $('.sec').css("transition-duration", "1s");
+
     
     }
+
+            $( ".sec .menu-item" ).addClass( "des-fue2" );
+            $( ".sec .menu-item" ).addClass( "des-fue" );             
+            $( ".sec .menu-item a" ).addClass( "com-unic" );
+            $( ".sec .menu-item a" ).addClass( "des-den" );
+
+            $( ".sec .menu-item-181" ).removeClass( "pasosanf-accion" );
+            $( ".sec .menu-item-181" ).removeClass( "des-fue2" );
+            $( ".sec .menu-item-181" ).removeClass( "des-fue" );              
+            $( ".sec .menu-item-181 a" ).removeClass( "com-unic" );
+            $( ".sec .menu-item-181 a" ).removeClass( "des-den" );
 }
 
 
@@ -502,6 +556,11 @@ function Scripts(){
         document.getElementById("myNav").style.width = "0%";
         $("header").show(0);
     }
+
+        $('.zoom-in').css('transform', 'scale(1.2)');
+        $('.zoom-in .container').css('transform', 'scale(.8)');
+        $('.zoom-in .container').css('transition', 'transform 17s');
+
     </script>
     	<?php
     }

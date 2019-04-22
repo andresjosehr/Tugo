@@ -18,87 +18,43 @@
     } 
     .header__menu .menu-item-181 a {
       color: white;
-		background: #fc782a; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #fc782a 0%, #fa4c4c 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #fc782a 0%,#fa4c4c 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #fc782a 0%,#fa4c4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', endColorstr='#fa4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    }
+    	background: #fc782a; /* Old browsers */
+    	background: -moz-linear-gradient(-45deg, #fc782a 0%, #fa4c4c 100%); /* FF3.6-15 */
+    	background: -webkit-linear-gradient(-45deg, #fc782a 0%,#fa4c4c 100%); /* Chrome10-25,Safari5.1-6 */
+    	background: linear-gradient(135deg, #fc782a 0%,#fa4c4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', endColorstr='#fa4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
     .prin{
-      display: none;
+      display: none !important;
     }
-  </style>
-  
-<header class="header" style="background: white">
-    <div class="container full-height container-is-gapless-table">
-      <!-- Header TOP -->
-      <div class="header-container full-height">
-        <div class="header__logo flex-center">
-         <a href="<?php echo get_site_url(); ?>"><img src="<?php echo site_url(); ?>/wp-content/uploads/2018/10/logo-nan.svg" alt=""></a>
-        </div>
-        <div class="header__menu">
-          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-        </div>
-        <div class="flex-center">
-          <div id="nav-icon3" onclick="openNav()">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-      <!-- END Header TOP -->
-    </div>
-  </header>
-
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <!-- Overlay content -->
-      <div class="overlay-content">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
 
 
-  <style>
-    .tutoriales{
+
+  .tutoriales{
     padding-top: 150px;
   }
-
   /* Style the tab */
   .tab {
       overflow: hidden;
       text-align: center;
-
   }
-
   /* Style the buttons inside the tab */
   .tutoriales .tab button {
     float: none;
     margin: 0;
     padding: 14px 7%;
-
   }
-
   /* Change background color of buttons on hover */
   .tab button:hover {
     color: #d68251;
     font-size: 20px;
     font-weight: 700;
-
   }
   .active{
     color: #d68251 !important;
     font-size: 25px !important;
     font-weight: 700 !important;
   }
-
   /* Create an active/current tablink class */
   .tab2 button.active {
     margin-top: -5px;
@@ -106,14 +62,12 @@
     font-size: 22px;
     font-weight: 700;
   }
-
   /* Style the tab content */
   .tabcontent {
       display: none;
       padding: 6px 12px;
       border-top: none;
   }
-
   .tuto-col1{
     margin-right: 00%;
   }
@@ -168,42 +122,32 @@ font-weight: 500;
     margin: 0 33% -46% 1%;
 }
 @media only screen and (max-width: 769px){
-
   .tuto-content-3{
     display: block !important;
     margin: 125px 10% 0 10%;
   }
-
   .tutoriales {
     padding-top: 123px;
   }
-
   .col4{
     padding-top: 0px;
   }
-
   .tuto-content-2 {
     margin: 34px 9% 52px 13%;
     padding-top: 0px;
   }
-
   .tutoriales .tab button {
     padding: 14px 5%;
 }
 .tab{
-
      margin-left: 8px;
 }
-
 }
-
-
 @media only screen and (max-width: 769px) and (min-width: 500px){
 .tuto-video {
     width: 79%;
   }
 }
-
 @media only screen and (max-width: 500px){
     .tuto-video{
     width: 83%;
@@ -215,7 +159,6 @@ font-weight: 500;
     width: 97%;
     margin-left: 12px;
   }
-
   .tablinks{
   color: #c3c3c3;
   font-size: 18px;
@@ -223,6 +166,44 @@ font-weight: 500;
   }
 }
   </style>
+  
+<header class="header sec" style="background: white">
+    <div class="container full-height container-is-gapless-table">
+      <!-- Header TOP -->
+      <div class="header-container full-height">
+        <div class="header__logo flex-center">
+         <a href="<?php echo get_site_url(); ?>"><img src="<?php echo site_url(); ?>/wp-content/uploads/2018/10/logo-nan.svg" alt=""></a>
+        </div>
+        <div class="header__menu">
+          <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+        </div>
+        <div class="flex-center">
+          <div id="nav-icon3" onclick="openNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <!-- END Header TOP -->
+    </div>
+  </header>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+
 
 
   <section>
@@ -238,33 +219,58 @@ font-weight: 500;
               <button class="tablinks active hvr-pulse-grow" onclick="openCity(event, 'Paris')">Anfitrión</button>
               <button class="tablinks hvr-pulse-grow" onclick="openCity(event, 'Tokyo')">Experiencia</button>
             </div>
+
+            <?php
+
+        // check if the repeater field has rows of data
+        if( have_rows('videos') ):
+
+          // loop through the rows of data
+            while ( have_rows('videos') ) : the_row();
+
+
+              ?>
+
           <div id="London" class="tabcontent">
             <div class="tuto-tabcontent">
-              <iframe class="tuto-video" src="https://www.youtube.com/embed/yImNqjKeYaY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe class="tuto-video" src="https://www.youtube.com/embed/<?php the_sub_field('viajero'); ?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <img class="tuto-fondo" class="tuto-back" src="<?php echo site_url(); ?>/wp-content/uploads/2018/10/Path_813.png" alt="">
             </div>
           </div>
-
           <div id="Paris" class="tabcontent" style="display: block;">
             <div class="tuto-tabcontent">
-              <iframe class="tuto-video" src="https://www.youtube.com/embed/yImNqjKeYaY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe class="tuto-video" src="https://www.youtube.com/embed/<?php the_sub_field('anfitrion'); ?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <img class="tuto-fondo" class="tuto-back" src="<?php echo site_url(); ?>/wp-content/uploads/2018/10/Path_813.png" alt="">
             </div>
           </div>
 
           <div id="Tokyo" class="tabcontent">
             <div class="tuto-tabcontent">
-              <iframe class="tuto-video" src="https://www.youtube.com/embed/yImNqjKeYaY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe class="tuto-video" src="https://www.youtube.com/embed/<?php the_sub_field('experiencia'); ?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <img class="tuto-fondo" class="tuto-back" src="<?php echo site_url(); ?>/wp-content/uploads/2018/10/Path_813.png" alt="">
             </div>
           </div>
         </div>
+
+
+              <?php
+                
+
+            endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+
+        ?>
         <div class="column is-4 tutoriales col4">
             <div class="tuto-content-2" style="line-height: 1.1;">
-              <span class="com-tuto">¿Cómo trabaja Tugo con el antifrión?</span>
+              <span class="com-tuto"><?php the_field("subtitulo") ?></span>
               <hr class="ray-tuto"><br><br>
               <div>
-              <span class="text-tuto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto ea recusandae ullam reprehenderit magnam voluptatum qui numquam,s</span>
+              <span class="text-tuto"><?php the_field("contenido") ?></span>
               </div>
             </div>
         </div>

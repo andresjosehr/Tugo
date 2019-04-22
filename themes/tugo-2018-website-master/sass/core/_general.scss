@@ -176,7 +176,7 @@ body {
     background-color: #460A8F !important;
 }
 .button8normor:hover{
-  border: 0px solid #f26f21;
+  border: 0px solid #7C34F9;
   color: #fff !important;
 }
 .anf-btn-text:hover{
@@ -190,7 +190,7 @@ body {
     background-color: #460A8F !important;
 }
 .button8normor2:hover{
-  border: 0px solid #f26f21;
+  border: 0px solid #7C34F9;
   color: #fff !important;
 }
 
@@ -297,6 +297,10 @@ body {
       position: relative;
       z-index: 998;
     }
+    .como-fun-acc:before, .como-fun-acc:after {
+      background-color: #fff !important;
+    }
+
     .des-fue:before, .des-fue:after {
       content: '';
       display: block;
@@ -318,8 +322,8 @@ body {
       height: 18px;
       left: -8px;
       width: 112%;
-      height: 112%;
-      top: 1px;
+      height: 135%;
+      top: -2px;
       left: -10px;
       -webkit-transform: scale3d(0, 1, 1);
               transform: scale3d(0, 1, 1);
@@ -341,4 +345,27 @@ body {
 
     .com-accion{
       color: #fff !important;
+    }
+
+/*    .pass-accion:before{
+      color: #fb623b !important;
+    }*/
+
+    .com-unic{
+      color: #fc6f31 !important;
+    }
+
+    .pasosanf-accion:hover a{
+      color: #fff !important;
+    }
+
+    .pasosanf-accion:before{
+      background-color: #fc6f31 !important;
+    }
+    .pasosanf-accion:after{
+      background-color: #fc6f31 !important;
+    }
+
+    .com-accion:hover{
+      color: #fc782a !important;
     }

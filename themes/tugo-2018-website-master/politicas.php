@@ -25,9 +25,55 @@
     .prin{
       display: none;
     }
+
+    
   </style>
-  
-<header class="header" style="background: white">
+
+
+<style>
+.accordion {
+    background-color: rgba(249, 120, 42, 2);
+    color: #fff;
+    cursor: pointer;
+    padding: 11px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+div .panel:not(:last-child) {
+    margin-bottom: -7px;
+}
+
+
+.politicas .accordion:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.politicas .active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+
+
+
+
+<header class="header sec" style="background: white;height: 125px;">
     <div class="container full-height container-is-gapless-table">
       <!-- Header TOP -->
       <div class="header-container full-height">
@@ -129,11 +175,11 @@ body {font-family: "Lato", sans-serif;}
         background-color: #e0e0e026;
 }
  .tab-pol{
-          padding-top: 80px;
+    padding-top: 123px;
 }
 .global-pol {
     padding-top: 58px;
-    margin: 0 12%;
+    margin: 50px 12%;
 }
 .col-left{
       padding-right: 0;
@@ -141,11 +187,12 @@ body {font-family: "Lato", sans-serif;}
 
 }
 
-.active:after {
+.politicas .active:after {
     content: '\00a0';
     color: #777;
-    width: 8px;
-    height: 24px;
+    width: 6px;
+    margin-right: -6px;
+    height: 20px;
     float: right;
     border-radius: 41px;
     background-image: linear-gradient(177deg, #fc782a 0%, #fa4c4c 100%);
@@ -155,12 +202,78 @@ body {font-family: "Lato", sans-serif;}
   .col-left{
     display: none;
   }
+  .politicas{
+    padding-top: 0px;
+  }
+  .global-pol {
+     padding-top: 0px; 
+  }
+  .pol {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-width: 769px){
+  .menu-resp{
+    display: none
+  }
+}
+
+.acor-tit{
+  padding-left: 30px;
+}
+
+.con-pa{
+  padding-top: 5px;
+}
+
+.menu-resp a{
+  color: #003d56;
 }
 
 
 
 </style>
+
+
+
+
+<div style="padding-top: 127px;" class="menu-resp">
+  <button class="accordion acor-tit">Politicas de Privacidad</button>
+  <div class="panel">
+    <div class="con-pa">
+
+              <?php
+
+          $i=1;
+          // check if the repeater field has rows of data
+          if( have_rows('menu_lateral') ):
+
+            // loop through the rows of data
+              while ( have_rows('menu_lateral') ) : the_row();
+
+                ?>
+                  <a class="tat<?php echo $i ?>" onclick="openCity(event, 'politicas<?php echo $i; ?>')" id="politica<?php echo $i ?>"><li style="font-weight: 600;list-style: none; padding-bottom: 2.5px;padding-top: 2.5px"><?php the_sub_field('nombre'); ?></li></a><hr style="margin: .1em 0;width: 114%;margin-left: -20px;">
+                <?php
+                
+                $i++;
+              endwhile;
+          endif;
+
+        ?>
+      <br>
+    </div>
+  </div>
+
+  <!-- <button class="accordion acor-tit">Terminos y condiciones</button> -->
+<!--   <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div> -->
+
+</div>
  
+
+
  <section class="politicas">
 	<div class="columns">
 		<div class="column is-3 col-left" align="left">
@@ -246,6 +359,25 @@ function openCity(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("politica1").click();
+
+
+</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
 
 <?php Scripts(); ?>

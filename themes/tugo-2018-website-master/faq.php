@@ -25,10 +25,10 @@
   </div>
 
 
-<section class="faq" style='background-image: url("<?php the_field('background_header'); ?>");'>
+<section class="faq zoom-in" style='background-image: url("<?php the_field('background_header'); ?>");'>
 
   <div class="columns">
-    <div class="columns" align="center">
+    <div class="columns" align="center" style="margin-left: 5px;">
       <div class="faq-hed">
         <span class="faq-tit"><?php the_field('titulo_header'); ?></span><br><br>
         <span class="faq-sub"><?php the_field('descripcion_header'); ?></span>
@@ -37,74 +37,7 @@
   </div>
 </section>
 
-<style>
-.accordion {
-    background-color: #fff;
-    cursor: pointer;
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    text-align: left;
-    outline: none;
-    transition: 0.4s;
-    border-bottom: 0px;
 
-    color: #6a6a6a;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-
-.accordion:after {
-    content: '\203A';
-    color: #777;
-    font-weight: bold;
-    float: left;
-    margin-left: 5px;
-    margin-right: 17px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
-.active:after {
-    content: "\203A";
-    margin-left: 5px;
-    margin-right: 17px;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.panel {
-    padding: 0 34px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    margin-top: 6px;
-}
-.faq-hr{
-  border: 1px solid #f4f4f4;
-      margin-bottom: 12px;
-    margin-top: -16px;
-}
-.cont-col2{
-  margin-right: 21%;
-    margin-left: 6%;
-    margin-top: 32px;
-}
-
-.cont-col1{
-  margin-left: 13%;
-  margin-top: 32px;
-  margin-bottom: 50px;
-}
-</style>
 
 <section class="faq-content">
 <div class="container">

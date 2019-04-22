@@ -23,7 +23,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc782a', endColorstr='#fa4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
     .prin{
-      display: none;
+      display: none !important;
     }
   </style>
   
@@ -72,7 +72,7 @@
 					<div class="container">
 						<span class="ser-tit">Comienza la aventura</span><br>	
 						<span class="ser-sub">de ser un anfitrion Tugo</span><br><br>
-						<?php echo do_shortcode('[contact-form-7 id="291" title="Sin título"]') ?>
+						<?php echo do_shortcode('[contact-form-7 id="202" title="Ser Anfitrion"]') ?>
 						<!-- <div class="columns">
 							<div class="column"><input type="text" name="nombre" placeholder="Nombre" class="input in-anf"></div>
 							<div class="column"><input type="text" name="apellido" placeholder="Apellido" class="input in-anf"></div>

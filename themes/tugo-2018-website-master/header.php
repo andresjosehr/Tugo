@@ -101,12 +101,31 @@
 
 </head>
 
+<style>
+ header .des-fue2:before{
+    width: 116%;
+    height: 108%;
+    left: -4px;
+    top: -1px;
+}
+header .des-fue:after {
+    display: none;
+}
+
+header .des-fue:before {
+    display: none;
+}
+header li a:hover{
+  color: #fc782a !important;
+}
+</style>
+
 <body <?php body_class(); ?>>
   <!-- Header Section -->
-  <header class="header prin">
+  <header class="header prin" style="display: block;">
     <div class="container full-height container-is-gapless-table">
       <!-- Header TOP -->
-      <div class="header-container full-height">
+      <div class="header-container full-height" style="padding-top: 10px;">
         <div class="header__logo flex-center">
          <a href="<?php echo get_site_url(); ?>"><img class="img-prin" src="<?php bloginfo('template_directory'); ?>/images/logo_header.png" alt=""></a>
         </div>

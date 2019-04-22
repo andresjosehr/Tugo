@@ -30,14 +30,14 @@
 
 
 
-<section class="header-viajero hed-cont" style='background-image: url("<?php echo get_site_url().'/wp-content/uploads/2018/10/jakob-owens-224352-unsplash.png'; ?>");'>
+<section class="header-viajero hed-cont zoom-in" style='background-image: url("<?php echo get_site_url().'/wp-content/uploads/2018/10/jakob-owens-224352-unsplash.png'; ?>");'>
 	<div class="container">
 	<div class="columns">
 		<div class="column">
 			<div class="form-prins">
 				<span class="form-title">Contáctanos,</span><br>
 				<span class="form-sub">sé parte de la experiencia Tugo</span><br><br>
-				<?php echo do_shortcode('[contact-form-7 id="263" title="Formulario de contacto 1"]') ?>
+				<?php echo do_shortcode('[contact-form-7 id="201" title="Formulario de contacto 1"]') ?>
 					<!-- <div class="columns">
 						<div class="column">
 							<div class="field">
@@ -77,8 +77,50 @@
 	</div>
 </section>
 
+<script>
+		var width = $(window).width();
+
+		if (width<=769) {
+			$('.textarea').attr('rows','3');
+		}else{
+			$('.textarea').attr('rows','5');
+		}
+
+		$('.wpcf7-submit').attr('value','Enviar');
+
+</script>
+
 <style type="text/css">
-	input[type="submit"],
+
+input[type="text"], textarea{
+
+	font-family: "Montserrat";
+
+}
+.in-email{
+	margin-top: -10px;
+}
+
+@media only screen and (min-width: 1000px){
+	.enviar-cont{
+		    padding-left: 9%;
+	}
+}
+
+@media only screen and (max-width: 469px){
+	.enviar-cont{
+		    padding-left: 14%;
+	}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1000px){
+	.enviar-cont{
+		    padding-left: 17%;
+	}
+}
+
+
+input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
@@ -94,6 +136,15 @@ button {
    -webkit-appearance: button; /* for input */
      -moz-user-select: none;
       -ms-user-select: none;
+}
+
+
+input:focus, textarea:focus { 
+    background-color: rgba(255, 255, 255, .6);
+}
+.wpcf7-form-control{
+    color: white !important;
+
 }
 </style>
 <script type="text/javascript">

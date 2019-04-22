@@ -14,15 +14,44 @@
 	  	</div>
 	  </div>
 	  <div class="column menu-foot">
-	  	<a class="foot-des" href="<?php echo site_url(); ?>/politicas">Politicas de privacidad</a><br>
-	  	<a class="foot-des" href="<?php echo site_url(); ?>/politicas">Términos y condiciones</a><br>
-	  	<a class="foot-des" href="<?php echo site_url(); ?>/tutoriales">Tutoriales</a>
+	  	<a class="foot-des" style="font-size: 13px;" href="<?php echo site_url(); ?>/politicas">Politicas de privacidad</a><br>
+	  	<a class="foot-des" style="font-size: 13px;" href="<?php echo site_url(); ?>/politicas">Términos y condiciones</a><br>
+	  	<a class="foot-des" style="font-size: 13px;" href="<?php echo site_url(); ?>/tutoriales">Tutoriales</a>
 	  </div>
 	  <div class="column row-net">
 	  	<div class="columns social-foot">
-	  	<div class="column is-3" align="center"><i class="fab fa-twitter fa-2x" style="color: #5c5c5c;"></i></div>
-	  	<div class="column is-3" align="center"><i class="fab fa-facebook-f fa-2x" style="color: #5c5c5c;"></i></div>
-	  	<div class="column is-3" align="center"><i class="fab fa-instagram fa-2x" style="color: #5c5c5c;"></i></div>
+
+
+
+	  		<?php
+
+				// check if the repeater field has rows of data
+				if( have_rows('redes_social') ):
+
+				 	// loop through the rows of data
+				    while ( have_rows('redes_social') ) : the_row();
+
+
+				    	?>
+
+							<a href="<?php the_sub_field('facebook'); ?>"><div class="column is-3" align="center"><i class="fab fa-facebook-f fa-2x" style="color: #5c5c5c;"></i></div></a>
+					  		<a href="<?php the_sub_field('instagram'); ?>"><div class="column is-3" align="center"><i class="fab fa-instagram fa-2x" style="color: #5c5c5c;"></i></div></a>
+					  		<a href="<?php the_sub_field('twitter'); ?>"><div class="column is-3" align="center"><i class="fab fa-twitter fa-2x" style="color: #5c5c5c;"></i></div></a>
+
+
+					  	<?php
+				        
+
+				    endwhile;
+
+				else :
+
+				    // no rows found
+
+				endif;
+
+				?>
+	  
 	  </div>
 	  </div>
 	</div>
@@ -79,7 +108,7 @@
 	.footer{
 		background-color: #141414;
 		font-family: Montserrat;
-		padding: 3rem 2.5rem 3rem;
+		padding: 3rem 3.5rem 3rem;
 	}
 	.foot-des{
     width: 326px;
